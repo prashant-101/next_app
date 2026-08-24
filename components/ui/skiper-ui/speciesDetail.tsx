@@ -21,7 +21,7 @@ export type SpeciesJSON = {
   category: string; // Matches API payload
   iucnStatus: string;
   family: string;
-  population?: {
+   population?: {
     [year: string]: number | string | undefined;
     trajectory?: string;
   };
