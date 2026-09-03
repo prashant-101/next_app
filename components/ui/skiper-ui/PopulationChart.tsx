@@ -1,7 +1,11 @@
 "use client";
 
-type PopulationData = {
-  [year: string]: number | string;
+import React from "react";
+
+// Updated type definition to accommodate undefined fields and optional non-year keys like trajectory
+export type PopulationData = {
+  [year: string]: number | string | undefined;
+  trajectory?: string;
 };
 
 interface PopulationChartProps {
@@ -25,15 +29,18 @@ export default function PopulationChart({
     );
   }
 
+  // Filter valid 4-digit year keys and parse numeric string/number values
   const data = Object.entries(population)
     .filter(
       ([year, value]) =>
         /^\d{4}$/.test(year) &&
-        typeof value === "number"
+        value !== undefined &&
+        value !== null &&
+        !isNaN(Number(value))
     )
     .map(([year, value]) => ({
       year: Number(year),
-      population: value as number,
+      population: Number(value),
     }))
     .sort((a, b) => a.year - b.year);
 
@@ -63,11 +70,8 @@ export default function PopulationChart({
   const paddingTop = 30;
   const paddingBottom = 60;
 
-  const graphWidth =
-    width - paddingLeft - paddingRight;
-
-  const graphHeight =
-    height - paddingTop - paddingBottom;
+  const graphWidth = width - paddingLeft - paddingRight;
+  const graphHeight = height - paddingTop - paddingBottom;
 
   const maxPopulation =
     Math.max(...data.map((item) => item.population)) * 1.1;
@@ -85,11 +89,11 @@ export default function PopulationChart({
     );
   };
 
-  const getY = (population: number) => {
+  const getY = (populationVal: number) => {
     return (
       paddingTop +
       graphHeight -
-      ((population - minPopulation) /
+      ((populationVal - minPopulation) /
         (maxPopulation - minPopulation)) *
         graphHeight
     );
