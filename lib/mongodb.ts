@@ -23,8 +23,14 @@ export async function connectDB() {
     return cached.conn;
   }
 
+  // Define local variable or use non-null assertion operator (!)
   if (!cached.promise) {
-    cached.promise = mongoose.connect(MONGODB_URI);
+    const opts = {
+      bufferCommands: false,
+    };
+
+    // MONGODB_URI! tells TypeScript that this string is guaranteed to be defined
+    cached.promise = mongoose.connect(MONGODB_URI!, opts);
   }
 
   cached.conn = await cached.promise;
