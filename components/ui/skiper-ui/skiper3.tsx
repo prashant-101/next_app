@@ -42,11 +42,15 @@ export default function Skiper3() {
     name: "Get Connected",
     href: "/get-connected",
   },
-  ];
+  {
+    name: "Report poaching",
+    href: "/report-poaching",
+  },
+];
 
-  /* =========================================================
+  /* 
      CLOSE AUTH MENU WHEN CLICKING OUTSIDE
-  ========================================================= */
+   */
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -68,17 +72,17 @@ export default function Skiper3() {
     };
   }, []);
 
-  /* =========================================================
+  /* 
      CLOSE MOBILE MENU ON ROUTE CHANGE
-  ========================================================= */
+   */
 
   useEffect(() => {
     setMenuOpen(false);
   }, [pathname]);
 
-  /* =========================================================
+  /* 
      GOOGLE LOGIN
-  ========================================================= */
+   */
 
   async function handleGoogleLogin() {
     try {
@@ -90,9 +94,9 @@ export default function Skiper3() {
     }
   }
 
-  /* =========================================================
+  /* 
      LOGOUT
-  ========================================================= */
+   */
 
   async function handleLogout() {
     try {
@@ -106,9 +110,9 @@ export default function Skiper3() {
 
   return (
     <>
-      {/* =====================================================
+      {/* 
           NAVBAR
-      ====================================================== */}
+       */}
 
       <nav
         className="
@@ -138,9 +142,9 @@ export default function Skiper3() {
             lg:px-8
           "
         >
-          {/* =================================================
+          {/* 
               LEFT
-          ================================================== */}
+           */}
 
           <div className="flex items-center gap-4">
             {/* LOGO */}
@@ -214,9 +218,9 @@ export default function Skiper3() {
             </div>
           </div>
 
-          {/* =================================================
+          {/* 
               RIGHT SIDE
-          ================================================== */}
+           */}
 
           <div className="flex items-center gap-2 sm:gap-3">
             {/* SEARCH */}
@@ -298,9 +302,9 @@ export default function Skiper3() {
               </motion.div>
             </div>
 
-            {/* =================================================
+            {/* 
                 AUTH BUTTON
-            ================================================== */}
+             */}
 
             <div
               ref={authRef}
@@ -445,9 +449,9 @@ export default function Skiper3() {
                 </button>
               )}
 
-              {/* =================================================
+              {/* 
                   AUTH DROPDOWN
-              ================================================== */}
+               */}
 
               <AnimatePresence>
                 {authOpen && (
@@ -647,9 +651,9 @@ export default function Skiper3() {
               </AnimatePresence>
             </div>
 
-            {/* =================================================
+            {/* 
                 MOBILE MENU BUTTON
-            ================================================== */}
+             */}
 
             <button
               type="button"
@@ -707,9 +711,9 @@ export default function Skiper3() {
           </div>
         </div>
 
-        {/* =====================================================
+        {/* 
             MOBILE NAVIGATION
-        ====================================================== */}
+         */}
 
         <AnimatePresence>
           {menuOpen && (
@@ -822,9 +826,9 @@ export default function Skiper3() {
         </AnimatePresence>
       </nav>
 
-      {/* =====================================================
+      {/* 
           NAVBAR SPACER
-      ====================================================== */}
+       */}
 
       <div className="h-16" />
     </>

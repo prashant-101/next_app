@@ -1,10 +1,13 @@
 "use client";
 
+import { number } from "framer-motion";
 import React, { useState } from "react";
 
 type Region = {
   id: string;
   name: string;
+    number?:number;
+
   subtitle: string;
   description: string;
   forests: string;
