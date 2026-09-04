@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState, useEffect, useRef } from "react";
 import {
   MapContainer,
   TileLayer,
@@ -61,39 +61,24 @@ const speciesIcon = L.divIcon({
    PARSE COORDINATES
 ========================================================= */
 
-function parseLocations(
-  location?: string
-): MapPoint[] {
-  if (
-    !location ||
-    typeof location !== "string"
-  ) {
+function parseLocations(location?: string): MapPoint[] {
+  if (!location || typeof location !== "string") {
     return [];
   }
 
   return location
     .split("|")
     .map((part) => {
-      const values = part
-        .trim()
-        .split(",");
+      const values = part.trim().split(",");
 
       if (values.length < 2) {
         return null;
       }
 
-      const lat = Number(
-        values[0].trim()
-      );
+      const lat = Number(values[0].trim());
+      const lng = Number(values[1].trim());
 
-      const lng = Number(
-        values[1].trim()
-      );
-
-      if (
-        !Number.isFinite(lat) ||
-        !Number.isFinite(lng)
-      ) {
+      if (!Number.isFinite(lat) || !Number.isFinite(lng)) {
         return null;
       }
 
@@ -102,10 +87,7 @@ function parseLocations(
         lng,
       };
     })
-    .filter(
-      (point): point is MapPoint =>
-        point !== null
-    );
+    .filter((point): point is MapPoint => point !== null);
 }
 
 /* =========================================================
@@ -116,10 +98,28 @@ export default function SpeciesMap({
   location,
   name = "Species",
 }: SpeciesMapProps) {
-  const points = useMemo(
-    () => parseLocations(location),
-    [location]
-  );
+  const points = useMemo(() => parseLocations(location), [location]);
+  
+  // Track scroll zoom activation state
+  const [isMapActive, setIsMapActive] = useState(false);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  // Disable zoom scroll when clicking outside the map component
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target as Node)
+      ) {
+        setIsMapActive(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   /* -------------------------------------------------------
      NO LOCATION
@@ -134,8 +134,7 @@ export default function SpeciesMap({
           </p>
 
           <p className="mt-2 text-sm text-slate-500">
-            No valid coordinates are available
-            for {name}.
+            No valid coordinates are available for {name}.
           </p>
         </div>
       </div>
@@ -146,58 +145,49 @@ export default function SpeciesMap({
      CENTER
   ------------------------------------------------------- */
 
-  const center: [number, number] = [
-    points[0].lat,
-    points[0].lng,
-  ];
+  const center: [number, number] = [points[0].lat, points[0].lng];
 
   return (
-    <div className="h-[400px] w-full overflow-hidden rounded-2xl">
+    <div
+      ref={containerRef}
+      onClick={() => setIsMapActive(true)}
+      className="relative h-[400px] w-full overflow-hidden rounded-2xl"
+    >
+      {/* Helper overlay notification when scroll-zoom is inactive */}
+      {!isMapActive && (
+        <div className="pointer-events-none absolute right-3 top-3 z-[1000] rounded-lg bg-black/60 px-3 py-1.5 text-xs font-medium text-white shadow-md backdrop-blur-sm">
+          Click map to enable scroll zoom
+        </div>
+      )}
+
       <MapContainer
         center={center}
         zoom={7}
-        scrollWheelZoom={true}
+        scrollWheelZoom={isMapActive}
         className="h-full w-full"
       >
         <TileLayer
-          attribution="&copy; OpenStreetMap contributors"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        {points.map(
-          (point, index) => (
-            <Marker
-              key={`${point.lat}-${point.lng}-${index}`}
-              position={[
-                point.lat,
-                point.lng,
-              ]}
-              icon={speciesIcon}
-            >
-              <Popup>
-                <div className="text-sm">
-                  <strong>
-                    {name}
-                  </strong>
-
-                  <br />
-
-                  <span>
-                    Latitude:{" "}
-                    {point.lat.toFixed(4)}
-                  </span>
-
-                  <br />
-
-                  <span>
-                    Longitude:{" "}
-                    {point.lng.toFixed(4)}
-                  </span>
-                </div>
-              </Popup>
-            </Marker>
-          )
-        )}
+        {points.map((point, index) => (
+          <Marker
+            key={`${point.lat}-${point.lng}-${index}`}
+            position={[point.lat, point.lng]}
+            icon={speciesIcon}
+          >
+            <Popup>
+              <div className="text-sm">
+                <strong>{name}</strong>
+                <br />
+                <span>Latitude: {point.lat.toFixed(4)}</span>
+                <br />
+                <span>Longitude: {point.lng.toFixed(4)}</span>
+              </div>
+            </Popup>
+          </Marker>
+        ))}
       </MapContainer>
     </div>
   );

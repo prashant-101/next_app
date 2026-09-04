@@ -1,26 +1,17 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import PopulationChart from "./PopulationChart";
 
-const SpeciesMap = dynamic(
-  () => import("./SpeciesMap"),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="flex h-[400px] w-full items-center justify-center rounded-2xl bg-slate-100">
-        <span className="text-sm text-slate-500">
-          Loading map...
-        </span>
-      </div>
-    ),
-  }
-);
-
-/* =========================================================
-   TYPES
-========================================================= */
+const SpeciesMap = dynamic(() => import("./SpeciesMap"), {
+  ssr: false,
+  loading: () => (
+    <div className="flex h-[400px] w-full items-center justify-center rounded-2xl bg-slate-100">
+      <span className="text-sm text-slate-500">Loading map...</span>
+    </div>
+  ),
+});
 
 export type SpeciesPopulation = {
   [year: string]: number | string | undefined;
@@ -39,35 +30,17 @@ export type SpeciesJSON = {
   category: string;
   iucnStatus: string;
   family: string;
-
   population?: SpeciesPopulation;
-
   location?: string;
-
   foodAndDiet?: string;
-
   natureAndActivity?: string;
-
   spatialDistribution?: string;
-
   distribution?: SpeciesDistribution;
-
   description?: string;
-
   images?: string[];
 };
 
-type SpeciesDetailProps = {
-  species: SpeciesJSON;
-};
-
-/* =========================================================
-   MAIN COMPONENT
-========================================================= */
-
-export default function SpeciesDetail({
-  species,
-}: SpeciesDetailProps) {
+export default function SpeciesDetail({ species }: { species: SpeciesJSON }) {
   const {
     commonName,
     scientificName,
@@ -81,43 +54,131 @@ export default function SpeciesDetail({
     spatialDistribution,
     distribution,
     description,
-    images,
+    images = [],
   } = species;
 
-  const provinces = distribution?.provinces ?? [];
-  const districts = distribution?.districts ?? [];
+  const fallbackImage = "/wildlife/animals/placeholder.jpg";
+  const imageList = images.length > 0 ? images : [fallbackImage];
 
-  const mainImage =
-    images && images.length > 0
-      ? images[0]
-      : "/wildlife/animals/placeholder.jpg";
+  // Active image index
+  const [activeIdx, setActiveIdx] = useState<number>(0);
+
+  // Full-screen modal state
+  const [isExpanded, setIsExpanded] = useState<boolean>(false);
+
+  // Reset index when species changes
+  useEffect(() => {
+    setActiveIdx(0);
+  }, [species]);
+
+  const activeImage = imageList[activeIdx] || fallbackImage;
+
+  // Carousel controls
+  const handlePrev = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setActiveIdx((prev) => (prev === 0 ? imageList.length - 1 : prev - 1));
+  };
+
+  const handleNext = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setActiveIdx((prev) => (prev === imageList.length - 1 ? 0 : prev + 1));
+  };
 
   return (
     <main className="min-h-screen bg-white">
       {/* =====================================================
-          HERO
+          HERO & CAROUSEL SECTION
       ===================================================== */}
-
       <section className="border-b border-slate-200 bg-slate-50">
         <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
-            {/* IMAGE */}
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
+            
+            {/* CAROUSEL CONTAINER */}
+            <div className="flex flex-col gap-4">
+              <div
+                onClick={() => setIsExpanded(true)}
+                className="group relative cursor-zoom-in overflow-hidden rounded-3xl bg-slate-200 shadow-md"
+              >
+                {/* Active Main Slide */}
+                <img
+                  src={activeImage}
+                  alt={commonName}
+                  className="h-[320px] w-full object-cover transition-all duration-300 sm:h-[420px] lg:h-[480px]"
+                />
 
-            <div className="overflow-hidden rounded-3xl bg-slate-200 shadow-sm">
-              <img
-                src={mainImage}
-                alt={commonName}
-                className="h-[320px] w-full object-cover sm:h-[420px] lg:h-[500px]"
-              />
+                {/* Left/Right Slide Arrows */}
+                {imageList.length > 1 && (
+                  <>
+                    <button
+                      type="button"
+                      onClick={handlePrev}
+                      className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-3 text-white transition hover:bg-black/80"
+                      aria-label="Previous Image"
+                    >
+                      ❮
+                    </button>
+                    <button
+                      type="button"
+                      onClick={handleNext}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-3 text-white transition hover:bg-black/80"
+                      aria-label="Next Image"
+                    >
+                      ❯
+                    </button>
+                  </>
+                )}
+
+                {/* Slide Counter Indicator */}
+                {imageList.length > 1 && (
+                  <div className="absolute top-4 left-4 rounded-full bg-black/60 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+                    {activeIdx + 1} / {imageList.length}
+                  </div>
+                )}
+
+                {/* Hover overlay prompt */}
+                <div className="absolute right-4 top-4 rounded-full bg-black/60 px-3 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100">
+                  🔍 Click to expand
+                </div>
+              </div>
+
+              {/* DOWNSIDE PREVIEW THUMBNAILS */}
+              {imageList.length > 1 && (
+                <div className="flex items-center gap-3 overflow-x-auto pb-2">
+                  {imageList.map((imgUrl, index) => {
+                    const isSelected = index === activeIdx;
+                    return (
+                      <button
+                        key={`${imgUrl}-${index}`}
+                        type="button"
+                        onClick={() => setActiveIdx(index)}
+                        className={`relative h-20 w-24 shrink-0 overflow-hidden rounded-xl border-2 transition-all ${
+                          isSelected
+                            ? "border-emerald-600 scale-95 shadow-md"
+                            : "border-transparent opacity-60 hover:opacity-100"
+                        }`}
+                      >
+                        <img
+                          src={imgUrl}
+                          alt=""
+                          className="h-full w-full object-cover"
+                        />
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
             </div>
 
-            {/* INFORMATION */}
-
+            {/* SPECIES INFORMATION */}
             <div>
-              <div className="mb-4 flex flex-wrap gap-2">
-                <Badge text={category} />
+              <div className="mb-4 flex flex-wrap items-center gap-2">
+                <span className="rounded-full bg-emerald-100 px-4 py-2 text-sm font-semibold text-emerald-700">
+                  {category || "Unknown"}
+                </span>
 
-                <StatusBadge status={iucnStatus} />
+                <span className="rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-700">
+                  IUCN: {iucnStatus?.toUpperCase() || "UNKNOWN"}
+                </span>
               </div>
 
               <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
@@ -132,7 +193,6 @@ export default function SpeciesDetail({
                 <p className="text-sm font-medium uppercase tracking-wide text-slate-400">
                   Family
                 </p>
-
                 <p className="mt-1 text-lg font-semibold text-slate-800">
                   {family || "Not available"}
                 </p>
@@ -144,328 +204,59 @@ export default function SpeciesDetail({
                 </p>
               )}
             </div>
+
           </div>
         </div>
       </section>
 
       {/* =====================================================
-          QUICK INFORMATION
+          FULL-SCREEN EXPANSION MODAL
       ===================================================== */}
-
-      <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          <InfoCard
-            title="Species"
-            value={commonName}
-          />
-
-          <InfoCard
-            title="Category"
-            value={category}
-          />
-
-          <InfoCard
-            title="IUCN Status"
-            value={iucnStatus}
-          />
-
-          <InfoCard
-            title="Family"
-            value={family}
-          />
-        </div>
-      </section>
-
-      {/* =====================================================
-          ABOUT
-      ===================================================== */}
-
-      {description && (
-        <ContentSection title="About the Species">
-          <p className="leading-8 text-slate-700">
-            {description}
-          </p>
-        </ContentSection>
-      )}
-
-      {/* =====================================================
-          BEHAVIOR
-      ===================================================== */}
-
-      {natureAndActivity && (
-        <ContentSection title="Nature & Activity">
-          <p className="leading-8 text-slate-700">
-            {natureAndActivity}
-          </p>
-        </ContentSection>
-      )}
-
-      {/* =====================================================
-          DIET
-      ===================================================== */}
-
-      {foodAndDiet && (
-        <ContentSection title="Food & Diet">
-          <p className="leading-8 text-slate-700">
-            {foodAndDiet}
-          </p>
-        </ContentSection>
-      )}
-
-      {/* =====================================================
-          DISTRIBUTION
-      ===================================================== */}
-
-      <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <SectionHeading title="Distribution in Nepal" />
-
-        <div className="grid gap-6 md:grid-cols-2">
-          <DistributionCard
-            title="Provinces"
-            items={provinces}
-          />
-
-          <DistributionCard
-            title="Districts"
-            items={districts}
-          />
-        </div>
-      </section>
-
-      {/* =====================================================
-          MAP
-      ===================================================== */}
-
-      <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <SectionHeading title="Species Location" />
-
-        <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white p-2 shadow-sm">
-          <SpeciesMap
-            location={location}
-            name={commonName}
-          />
-        </div>
-      </section>
-
-      {/* =====================================================
-          POPULATION
-      ===================================================== */}
-
-      <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <SectionHeading title="Population Trend" />
-
-        <div className="rounded-3xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
-          <PopulationChart
-            population={population}
-          />
-        </div>
-
-        {population?.trajectory && (
-          <div className="mt-5 rounded-2xl bg-slate-50 p-5">
-            <p className="text-sm font-semibold text-slate-500">
-              Population trajectory
-            </p>
-
-            <p className="mt-2 text-slate-700">
-              {population.trajectory}
-            </p>
-          </div>
-        )}
-      </section>
-
-      {/* =====================================================
-          SPATIAL DISTRIBUTION
-      ===================================================== */}
-
-      {spatialDistribution && (
-        <ContentSection title="Spatial Distribution">
-          <p className="leading-8 text-slate-700">
-            {spatialDistribution}
-          </p>
-        </ContentSection>
-      )}
-
-      {/* =====================================================
-          GALLERY
-      ===================================================== */}
-
-      {images && images.length > 1 && (
-        <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-          <SectionHeading title="Gallery" />
-
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {images.slice(1).map((image, index) => (
-              <div
-                key={`${image}-${index}`}
-                className="overflow-hidden rounded-2xl bg-slate-100"
-              >
-                <img
-                  src={image}
-                  alt={`${commonName} ${index + 2}`}
-                  className="h-64 w-full object-cover transition-transform duration-300 hover:scale-105"
-                />
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* =====================================================
-          FOOTER SPACE
-      ===================================================== */}
-
-      <div className="h-16" />
-    </main>
-  );
-}
-
-/* =========================================================
-   SECTION
-========================================================= */
-
-function ContentSection({
-  title,
-  children,
-}: {
-  title: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-      <SectionHeading title={title} />
-
-      <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
-        {children}
-      </div>
-    </section>
-  );
-}
-
-/* =========================================================
-   SECTION HEADING
-========================================================= */
-
-function SectionHeading({
-  title,
-}: {
-  title: string;
-}) {
-  return (
-    <h2 className="mb-6 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-      {title}
-    </h2>
-  );
-}
-
-/* =========================================================
-   BADGE
-========================================================= */
-
-function Badge({
-  text,
-}: {
-  text?: string;
-}) {
-  return (
-    <span className="rounded-full bg-emerald-100 px-4 py-2 text-sm font-semibold text-emerald-700">
-      {text || "Unknown"}
-    </span>
-  );
-}
-
-/* =========================================================
-   STATUS BADGE
-========================================================= */
-
-function StatusBadge({
-  status,
-}: {
-  status?: string;
-}) {
-  const normalizedStatus =
-    status?.toUpperCase() || "UNKNOWN";
-
-  let className =
-    "bg-slate-100 text-slate-700";
-
-  if (normalizedStatus === "CR") {
-    className = "bg-red-100 text-red-700";
-  } else if (normalizedStatus === "EN") {
-    className = "bg-orange-100 text-orange-700";
-  } else if (normalizedStatus === "VU") {
-    className = "bg-yellow-100 text-yellow-700";
-  } else if (normalizedStatus === "NT") {
-    className = "bg-blue-100 text-blue-700";
-  } else if (normalizedStatus === "LC") {
-    className = "bg-green-100 text-green-700";
-  }
-
-  return (
-    <span
-      className={`rounded-full px-4 py-2 text-sm font-semibold ${className}`}
-    >
-      IUCN: {normalizedStatus}
-    </span>
-  );
-}
-
-/* =========================================================
-   INFO CARD
-========================================================= */
-
-function InfoCard({
-  title,
-  value,
-}: {
-  title: string;
-  value?: string;
-}) {
-  return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-      <p className="text-sm font-medium text-slate-500">
-        {title}
-      </p>
-
-      <p className="mt-2 truncate text-lg font-bold text-slate-900">
-        {value || "Not available"}
-      </p>
-    </div>
-  );
-}
-
-/* =========================================================
-   DISTRIBUTION CARD
-========================================================= */
-
-function DistributionCard({
-  title,
-  items,
-}: {
-  title: string;
-  items: string[];
-}) {
-  return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-      <h3 className="text-lg font-bold text-slate-900">
-        {title}
-      </h3>
-
-      {items.length > 0 ? (
-        <div className="mt-5 flex flex-wrap gap-2">
-          {items.map((item) => (
-            <span
-              key={item}
-              className="rounded-full bg-slate-100 px-3 py-2 text-sm text-slate-700"
+      {isExpanded && (
+        <div
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
+          onClick={() => setIsExpanded(false)}
+        >
+          <div
+            className="relative max-h-[90vh] max-w-[90vw]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={activeImage}
+              alt={commonName}
+              className="max-h-[85vh] max-w-[90vw] rounded-2xl object-contain shadow-2xl"
+            />
+            <button
+              type="button"
+              onClick={() => setIsExpanded(false)}
+              className="absolute -right-4 -top-4 rounded-full bg-white p-2 text-black shadow-lg hover:bg-slate-200"
             >
-              {item}
-            </span>
-          ))}
+              ✕
+            </button>
+          </div>
         </div>
-      ) : (
-        <p className="mt-4 text-sm text-slate-500">
-          No information available.
-        </p>
       )}
-    </div>
+
+      {/* =====================================================
+          MAP & DETAILS SECTIONS
+      ===================================================== */}
+      <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <h2 className="mb-6 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+          Species Location
+        </h2>
+        <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white p-2 shadow-sm">
+          <SpeciesMap location={location} name={commonName} />
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <h2 className="mb-6 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+          Population Trend
+        </h2>
+        <div className="rounded-3xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
+          <PopulationChart population={population} />
+        </div>
+      </section>
+    </main>
   );
 }
