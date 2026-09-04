@@ -29,11 +29,9 @@ async function getSpeciesData(id: string) {
 
     if (!animal) return null;
 
-    // Convert BSON ObjectId to plain string for safe React component rendering
-    return {
-      ...animal,
-      _id: animal._id.toString(),
-    };
+    // Deep-serialize all BSON fields (ObjectIDs, Dates) to plain JSON primitives
+    // This fixes React Error #441 when passing data to Client Components
+    return JSON.parse(JSON.stringify(animal));
   } catch (error) {
     console.error("Error fetching species data:", error);
     return null;
