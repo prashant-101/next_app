@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { connectDB } from "@/lib/mongodb";
 
 type Species = {
   _id: string;
@@ -35,30 +36,47 @@ export default async function SpeciesDetailPage({
 }: PageProps) {
   const { id } = await params;
 
-  const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL ||
-    "https://nextjsendangeredapp.vercel.app";
-
-  const response = await fetch(
-    `${baseUrl}/api/species/${encodeURIComponent(id)}`,
-    {
-      cache: "no-store",
-    }
-  );
-
-  if (response.status === 404) {
+  if (!id) {
     notFound();
   }
 
-  if (!response.ok) {
-    throw new Error("Failed to fetch species");
+  let animal: Species;
+
+  try {
+    console.log("DETAIL PAGE ID:", id);
+
+    const mongoose = await connectDB();
+    const db = mongoose.connection.db;
+
+    if (!db) {
+      throw new Error("MongoDB database is unavailable");
+    }
+
+    const result = await db.collection("species").findOne({
+      id: id,
+    });
+
+    if (!result) {
+      console.log("Species not found:", id);
+      notFound();
+    }
+
+    animal = {
+      ...result,
+      _id: result._id.toString(),
+    } as Species;
+
+    console.log("SPECIES FOUND:", animal.commonName);
+  } catch (error) {
+    console.error("SPECIES DETAIL PAGE ERROR:", error);
+    throw error;
   }
 
-  const animal: Species = await response.json();
-
+  // JSX is OUTSIDE try/catch
   return (
     <main className="min-h-screen p-6">
       <div className="mx-auto max-w-6xl">
+
         <h1 className="text-4xl font-bold">
           {animal.commonName}
         </h1>
@@ -71,7 +89,7 @@ export default async function SpeciesDetailPage({
           <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
             {animal.images.map((image, index) => (
               <img
-                key={image}
+                key={`${image}-${index}`}
                 src={image}
                 alt={`${animal.commonName} ${index + 1}`}
                 className="h-80 w-full rounded-xl object-cover"
@@ -82,19 +100,23 @@ export default async function SpeciesDetailPage({
 
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           <div>
-            <strong>Category:</strong> {animal.category}
+            <strong>Category:</strong>{" "}
+            {animal.category}
           </div>
 
           <div>
-            <strong>IUCN Status:</strong> {animal.iucnStatus}
+            <strong>IUCN Status:</strong>{" "}
+            {animal.iucnStatus}
           </div>
 
           <div>
-            <strong>Family:</strong> {animal.family || "N/A"}
+            <strong>Family:</strong>{" "}
+            {animal.family || "N/A"}
           </div>
 
           <div>
-            <strong>Location:</strong> {animal.location || "N/A"}
+            <strong>Location:</strong>{" "}
+            {animal.location || "N/A"}
           </div>
         </div>
 
@@ -133,6 +155,39 @@ export default async function SpeciesDetailPage({
             </p>
           </section>
         )}
+
+        {animal.spatialDistribution && (
+          <section className="mt-8">
+            <h2 className="text-2xl font-bold">
+              Spatial Distribution
+            </h2>
+
+            <p className="mt-3">
+              {animal.spatialDistribution}
+            </p>
+          </section>
+        )}
+
+        {animal.distribution && (
+          <section className="mt-8">
+            <h2 className="text-2xl font-bold">
+              Distribution
+            </h2>
+
+            <div className="mt-3">
+              <p>
+                <strong>Provinces:</strong>{" "}
+                {animal.distribution.provinces?.join(", ") || "N/A"}
+              </p>
+
+              <p className="mt-2">
+                <strong>Districts:</strong>{" "}
+                {animal.distribution.districts?.join(", ") || "N/A"}
+              </p>
+            </div>
+          </section>
+        )}
+
       </div>
     </main>
   );
