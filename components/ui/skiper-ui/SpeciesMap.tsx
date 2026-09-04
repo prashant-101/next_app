@@ -1,147 +1,203 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useMemo } from "react";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+} from "react-leaflet";
+import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
 type SpeciesMapProps = {
   location?: string;
-  name: string;
+  name?: string;
 };
 
-// Declared outside parent component
-function MapZoomController({
-  active,
-  useMap,
-}: {
-  active: boolean;
-  useMap: () => any;
-}) {
-  const map = useMap();
+type MapPoint = {
+  lat: number;
+  lng: number;
+};
 
-  useEffect(() => {
-    if (!map) return;
-    if (active) {
-      map.scrollWheelZoom.enable();
-    } else {
-      map.scrollWheelZoom.disable();
-    }
-  }, [active, map]);
+/* =========================================================
+   CUSTOM MARKER
+   Prevents Leaflet from requesting marker-icon-2x.png
+========================================================= */
 
-  return null;
-}
+const speciesIcon = L.divIcon({
+  className: "species-map-marker",
+  html: `
+    <div
+      style="
+        width: 30px;
+        height: 30px;
+        border-radius: 50% 50% 50% 0;
+        transform: rotate(-45deg);
+        background: #dc2626;
+        border: 3px solid white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+      "
+    >
+      <div
+        style="
+          width: 8px;
+          height: 8px;
+          background: white;
+          border-radius: 50%;
+          position: absolute;
+          top: 8px;
+          left: 8px;
+        "
+      ></div>
+    </div>
+  `,
+  iconSize: [30, 30],
+  iconAnchor: [15, 30],
+  popupAnchor: [0, -30],
+});
 
-export default function SpeciesMap({ location, name }: SpeciesMapProps) {
-  const [mounted, setMounted] = useState(false);
-  const [mapComponents, setMapComponents] = useState<any>(null);
-  const [mapActive, setMapActive] = useState(false);
+/* =========================================================
+   PARSE COORDINATES
+========================================================= */
 
-  useEffect(() => {
-    Promise.all([import("react-leaflet"), import("leaflet")]).then(
-      ([reactLeaflet, leaflet]) => {
-        setMapComponents({
-          MapContainer: reactLeaflet.MapContainer,
-          TileLayer: reactLeaflet.TileLayer,
-          Marker: reactLeaflet.Marker,
-          Popup: reactLeaflet.Popup,
-          useMap: reactLeaflet.useMap,
-          L: leaflet.default || leaflet,
-        });
-        setMounted(true);
-      }
-    );
-  }, []);
-
-  if (!mounted || !mapComponents) {
-    return (
-      <div className="h-[450px] rounded-2xl bg-slate-100 flex items-center justify-center text-slate-500">
-        Loading map...
-      </div>
-    );
+function parseLocations(
+  location?: string
+): MapPoint[] {
+  if (
+    !location ||
+    typeof location !== "string"
+  ) {
+    return [];
   }
 
-  if (!location) {
-    return (
-      <div className="h-[450px] rounded-2xl bg-slate-100 flex items-center justify-center text-slate-500">
-        Location information is not available.
-      </div>
-    );
-  }
-
-  const points = location
+  return location
     .split("|")
-    .map((point) => {
-      const [lat, lng] = point.trim().split(",").map(Number);
-      return { lat, lng };
+    .map((part) => {
+      const values = part
+        .trim()
+        .split(",");
+
+      if (values.length < 2) {
+        return null;
+      }
+
+      const lat = Number(
+        values[0].trim()
+      );
+
+      const lng = Number(
+        values[1].trim()
+      );
+
+      if (
+        !Number.isFinite(lat) ||
+        !Number.isFinite(lng)
+      ) {
+        return null;
+      }
+
+      return {
+        lat,
+        lng,
+      };
     })
     .filter(
-      (point) => Number.isFinite(point.lat) && Number.isFinite(point.lng)
+      (point): point is MapPoint =>
+        point !== null
     );
+}
+
+/* =========================================================
+   MAP
+========================================================= */
+
+export default function SpeciesMap({
+  location,
+  name = "Species",
+}: SpeciesMapProps) {
+  const points = useMemo(
+    () => parseLocations(location),
+    [location]
+  );
+
+  /* -------------------------------------------------------
+     NO LOCATION
+  ------------------------------------------------------- */
 
   if (points.length === 0) {
     return (
-      <div className="h-[450px] rounded-2xl bg-slate-100 flex items-center justify-center text-slate-500">
-        Invalid location coordinates.
+      <div className="flex h-[400px] w-full items-center justify-center rounded-2xl bg-slate-50 p-6 text-center">
+        <div>
+          <p className="font-semibold text-slate-700">
+            Location data unavailable
+          </p>
+
+          <p className="mt-2 text-sm text-slate-500">
+            No valid coordinates are available
+            for {name}.
+          </p>
+        </div>
       </div>
     );
   }
 
-  const { MapContainer, TileLayer, Marker, Popup, useMap, L } = mapComponents;
-  const center = points[0];
+  /* -------------------------------------------------------
+     CENTER
+  ------------------------------------------------------- */
 
-  const redConeIcon = L.divIcon({
-    className: "",
-    html: `
-      <div style="
-        width: 0;
-        height: 0;
-        border-left: 12px solid transparent;
-        border-right: 12px solid transparent;
-        border-bottom: 32px solid #dc2626;
-        transform: rotate(180deg);
-        filter: drop-shadow(0 2px 3px rgba(0,0,0,0.35));
-      "></div>
-    `,
-    iconSize: [24, 32],
-    iconAnchor: [12, 16],
-    popupAnchor: [0, -16],
-  });
+  const center: [number, number] = [
+    points[0].lat,
+    points[0].lng,
+  ];
 
   return (
-    <div
-      className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-sm"
-      onClick={() => setMapActive(true)}
-    >
-      <div className="absolute z-[1000] top-4 left-1/2 -translate-x-1/2 bg-black/75 text-white px-4 py-2 rounded-full text-sm pointer-events-none">
-        {mapActive ? "Map zoom enabled" : "Click map to enable zoom"}
-      </div>
-
+    <div className="h-[400px] w-full overflow-hidden rounded-2xl">
       <MapContainer
-        center={[center.lat, center.lng]}
+        center={center}
         zoom={7}
-        scrollWheelZoom={false}
-        className="h-[450px] w-full"
+        scrollWheelZoom={true}
+        className="h-full w-full"
       >
-        <MapZoomController active={mapActive} useMap={useMap} />
-
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          attribution="&copy; OpenStreetMap contributors"
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        {points.map((point, index) => (
-          <Marker
-            key={`point-${point.lat}-${point.lng}-${index}`}
-            position={[point.lat, point.lng]}
-            icon={redConeIcon}
-          >
-            <Popup>
-              <div className="font-semibold">{name}</div>
-              <div className="text-sm text-slate-500">
-                {point.lat.toFixed(4)}, {point.lng.toFixed(4)}
-              </div>
-            </Popup>
-          </Marker>
-        ))}
+        {points.map(
+          (point, index) => (
+            <Marker
+              key={`${point.lat}-${point.lng}-${index}`}
+              position={[
+                point.lat,
+                point.lng,
+              ]}
+              icon={speciesIcon}
+            >
+              <Popup>
+                <div className="text-sm">
+                  <strong>
+                    {name}
+                  </strong>
+
+                  <br />
+
+                  <span>
+                    Latitude:{" "}
+                    {point.lat.toFixed(4)}
+                  </span>
+
+                  <br />
+
+                  <span>
+                    Longitude:{" "}
+                    {point.lng.toFixed(4)}
+                  </span>
+                </div>
+              </Popup>
+            </Marker>
+          )
+        )}
       </MapContainer>
     </div>
   );

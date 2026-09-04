@@ -1,46 +1,42 @@
 import { notFound } from "next/navigation";
-import { connectDB } from "@/lib/mongodb";
+import SpeciesDetail from "@/components/ui/skiper-ui/SpeciesDetail";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
-export default async function SpeciesDetailPage({
+type PageProps = {
+  params: Promise<{
+    id: string;
+  }>;
+};
+
+export default async function SpeciesPage({
   params,
-}: {
-  params: Promise<{ id: string }>;
-}) {
+}: PageProps) {
   const { id } = await params;
 
-  const mongoose = await connectDB();
-  const db = mongoose.connection.db;
+  const baseUrl =
+    process.env.NEXT_PUBLIC_BASE_URL ||
+    "http://localhost:3000";
 
-  if (!db) {
-    throw new Error("Database unavailable");
-  }
+  try {
+    const response = await fetch(
+      `${baseUrl}/api/species/${encodeURIComponent(id)}`,
+      {
+        cache: "no-store",
+      }
+    );
 
-  const animal = await db.collection("species").findOne({ id });
+    if (!response.ok) {
+      notFound();
+    }
 
-  if (!animal) {
+    const species = await response.json();
+
+    return <SpeciesDetail species={species} />;
+  } catch (error) {
+    console.error("Failed to load species:", error);
+
     notFound();
   }
-
-  return (
-    <main className="min-h-screen p-10">
-      <h1 className="text-4xl font-bold">
-        {String(animal.commonName)}
-      </h1>
-
-      <p className="mt-4">
-        Scientific name: {String(animal.scientificName)}
-      </p>
-
-      <p className="mt-4">
-        Category: {String(animal.category)}
-      </p>
-
-      <p className="mt-4">
-        IUCN Status: {String(animal.iucnStatus)}
-      </p>
-    </main>
-  );
 }

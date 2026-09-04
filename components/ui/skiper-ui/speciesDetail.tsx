@@ -1,304 +1,471 @@
 "use client";
 
-import PopulationChart from "./PopulationChart";
-import React, { useState } from "react";
+import React from "react";
 import dynamic from "next/dynamic";
+import PopulationChart from "./PopulationChart";
 
-const SpeciesMap = dynamic(() => import("./SpeciesMap"), {
-  ssr: false,
-  loading: () => (
-    <div className="h-[450px] w-full rounded-2xl bg-slate-100 flex items-center justify-center text-slate-500">
-      Loading map...
-    </div>
-  ),
-});
+const SpeciesMap = dynamic(
+  () => import("./SpeciesMap"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-[400px] w-full items-center justify-center rounded-2xl bg-slate-100">
+        <span className="text-sm text-slate-500">
+          Loading map...
+        </span>
+      </div>
+    ),
+  }
+);
 
-// Explicit Type definition matching your exact JSON dataset
+/* =========================================================
+   TYPES
+========================================================= */
+
+export type SpeciesPopulation = {
+  [year: string]: number | string | undefined;
+  trajectory?: string;
+};
+
+export type SpeciesDistribution = {
+  provinces?: string[];
+  districts?: string[];
+};
+
 export type SpeciesJSON = {
   id: string;
   commonName: string;
   scientificName: string;
-  category: string; // Matches API payload
+  category: string;
   iucnStatus: string;
   family: string;
-   population?: {
-    [year: string]: number | string | undefined;
-    trajectory?: string;
-  };
-  location?: string; // String with piped coordinates e.g., "26.65, 86.96 | 27.35, 84.86"
+
+  population?: SpeciesPopulation;
+
+  location?: string;
+
   foodAndDiet?: string;
+
   natureAndActivity?: string;
+
   spatialDistribution?: string;
-  distribution?: {
-    provinces?: string[];
-    districts?: string[];
-  };
+
+  distribution?: SpeciesDistribution;
+
   description?: string;
+
   images?: string[];
 };
 
-interface AnimalDetailProps {
+type SpeciesDetailProps = {
   species: SpeciesJSON;
-}
+};
 
-export default function AnimalDetail({ species }: AnimalDetailProps) {
-  const [activeImage, setActiveImage] = useState(0);
+/* =========================================================
+   MAIN COMPONENT
+========================================================= */
 
-  if (!species) {
-    return (
-      <div className="min-h-screen bg-slate-50 p-10 text-center text-slate-500">
-        No species data available.
-      </div>
-    );
-  }
+export default function SpeciesDetail({
+  species,
+}: SpeciesDetailProps) {
+  const {
+    commonName,
+    scientificName,
+    category,
+    iucnStatus,
+    family,
+    population,
+    location,
+    foodAndDiet,
+    natureAndActivity,
+    spatialDistribution,
+    distribution,
+    description,
+    images,
+  } = species;
 
-  // Safe Property Mappings aligned with your exact JSON payload
-  const name = species.commonName || "Unknown Species";
-  const scientificName = species.scientificName || "";
-  const category = species.category || "Mammal";
-  const status = (species.iucnStatus || "UNKNOWN").toUpperCase().trim();
-  const family = species.family || "Not available";
-  const images = Array.isArray(species.images) ? species.images : [];
+  const provinces = distribution?.provinces ?? [];
+  const districts = distribution?.districts ?? [];
 
-  const description = species.description || "No description available for this species.";
-  const foodAndDiet = species.foodAndDiet || "Diet information is not available.";
-  const natureAndActivity = species.natureAndActivity || "Activity information is not available.";
-  const spatialDistribution = species.spatialDistribution || "Spatial distribution information is not available.";
-
-  // Status Styling
-  const statusColor =
-    status === "CR" ? "bg-red-700" :
-    status === "EN" ? "bg-orange-600" :
-    status === "VU" ? "bg-amber-500" :
-    status === "NT" ? "bg-yellow-500" :
-    status === "LC" ? "bg-green-600" : "bg-slate-500";
-
-  // Population Processing
-  const populationYears = species.population
-    ? Object.entries(species.population).filter(([key, value]) => {
-        if (key === "trajectory" || value === null || value === undefined) return false;
-        return !isNaN(Number(value));
-      })
-    : [];
-
-  const populationTrajectory = species.population?.trajectory || "";
-
-  // Distribution Arrays
-  const provinces = species.distribution?.provinces || [];
-  const districts = species.distribution?.districts || [];
+  const mainImage =
+    images && images.length > 0
+      ? images[0]
+      : "/wildlife/animals/placeholder.jpg";
 
   return (
-    <div className="min-h-screen bg-slate-50">
-      <main className="px-6 py-10">
-        <div className="max-w-7xl mx-auto">
-          {/* HEADER & OVERVIEW */}
-          <section id="overview" className="scroll-mt-10">
-            <div className="mb-8">
-              <p className="text-sm font-semibold text-slate-500 uppercase tracking-wider">{category}</p>
-              <h1 className="text-5xl font-bold text-slate-900 mt-2">{name}</h1>
-              {scientificName && <p className="text-xl italic text-slate-500 mt-2">{scientificName}</p>}
+    <main className="min-h-screen bg-white">
+      {/* =====================================================
+          HERO
+      ===================================================== */}
+
+      <section className="border-b border-slate-200 bg-slate-50">
+        <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+            {/* IMAGE */}
+
+            <div className="overflow-hidden rounded-3xl bg-slate-200 shadow-sm">
+              <img
+                src={mainImage}
+                alt={commonName}
+                className="h-[320px] w-full object-cover sm:h-[420px] lg:h-[500px]"
+              />
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {/* IMAGE GALLERY */}
-              <div id="gallery" className="lg:col-span-2 bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm">
-                <div className="w-full aspect-[16/10] bg-slate-100 flex items-center justify-center overflow-hidden">
-                  {images[activeImage] ? (
-                    <img
-                      src={images[activeImage]}
-                      alt={name}
-                      className="w-full h-full object-contain select-none"
-                      draggable={false}
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center text-slate-400">
-                      No image available
-                    </div>
-                  )}
-                </div>
+            {/* INFORMATION */}
 
-                <div className="grid grid-cols-4 gap-3 p-4">
-                  {[0, 1, 2, 3].map((index) => {
-                    const imgUrl = images[index];
-                    return (
-                      <button
-                        key={index}
-                        type="button"
-                        onClick={() => imgUrl && setActiveImage(index)}
-                        disabled={!imgUrl}
-                        className={`h-24 rounded-xl overflow-hidden border-2 transition-all duration-200 ${
-                          activeImage === index ? "border-blue-500 ring-2 ring-blue-100" : "border-transparent"
-                        } ${!imgUrl ? "bg-slate-100 cursor-default" : "hover:border-blue-300 cursor-pointer"}`}
-                      >
-                        {imgUrl ? (
-                          <img
-                            src={imgUrl}
-                            alt={`${name} preview ${index + 1}`}
-                            className="w-full h-full object-cover select-none"
-                            draggable={false}
-                          />
-                        ) : (
-                          <div className="w-full h-full flex items-center justify-center text-xs text-slate-400">
-                            No image
-                          </div>
-                        )}
-                      </button>
-                    );
-                  })}
-                </div>
+            <div>
+              <div className="mb-4 flex flex-wrap gap-2">
+                <Badge text={category} />
+
+                <StatusBadge status={iucnStatus} />
               </div>
 
-              {/* QUICK FACTS */}
-              <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-7 h-fit">
-                <h2 className="text-xl font-bold text-slate-900 mb-7">Quick Facts</h2>
-                <div className="space-y-6">
-                  <div>
-                    <p className="text-xs uppercase font-bold text-slate-400 tracking-wide">Common Name</p>
-                    <p className="text-slate-800 font-semibold mt-1">{name}</p>
-                  </div>
-                  <div>
-                    <p className="text-xs uppercase font-bold text-slate-400 tracking-wide">Scientific Name</p>
-                    <p className="text-slate-800 italic mt-1">{scientificName || "Not available"}</p>
-                  </div>
-                  <div>
-                    <p className="text-xs uppercase font-bold text-slate-400 tracking-wide">Category</p>
-                    <p className="text-slate-800 font-semibold mt-1">{category}</p>
-                  </div>
-                  <div>
-                    <p className="text-xs uppercase font-bold text-slate-400 tracking-wide">Family</p>
-                    <p className="text-slate-800 font-semibold mt-1">{family}</p>
-                  </div>
-                  <div>
-                    <p className="text-xs uppercase font-bold text-slate-400 tracking-wide">IUCN Status</p>
-                    <span className={`inline-block ${statusColor} text-white px-4 py-2 rounded-xl font-bold mt-2`}>
-                      {status}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+              <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+                {commonName}
+              </h1>
 
-          {/* ABOUT SECTION */}
-          <section id="about" className="mt-16 scroll-mt-10">
-            <div className="bg-white rounded-3xl border border-slate-200 p-8">
-              <p className="text-sm font-bold text-blue-600 uppercase tracking-wide mb-2">About the Species</p>
-              <h2 className="text-3xl font-bold text-slate-900 mb-5">Description</h2>
-              <p className="text-slate-600 leading-8">{description}</p>
-            </div>
-          </section>
+              <p className="mt-3 text-xl italic text-slate-500">
+                {scientificName}
+              </p>
 
-          {/* BEHAVIOR / NATURE & ACTIVITY */}
-          <section id="activity" className="mt-12 scroll-mt-10">
-            <div className="bg-white rounded-3xl border border-slate-200 p-8">
-              <p className="text-sm font-bold text-green-600 uppercase tracking-wide mb-2">Behavior</p>
-              <h2 className="text-3xl font-bold text-slate-900 mb-5">Nature & Activity</h2>
-              <p className="text-slate-600 leading-8">{natureAndActivity}</p>
-            </div>
-          </section>
+              <div className="mt-6">
+                <p className="text-sm font-medium uppercase tracking-wide text-slate-400">
+                  Family
+                </p>
 
-          {/* FOOD & DIET */}
-          <section id="diet" className="mt-12 scroll-mt-10">
-            <div className="bg-white rounded-3xl border border-slate-200 p-8">
-              <p className="text-sm font-bold text-orange-600 uppercase tracking-wide mb-2">Diet</p>
-              <h2 className="text-3xl font-bold text-slate-900 mb-5">Food & Diet</h2>
-              <p className="text-slate-600 leading-8">{foodAndDiet}</p>
-            </div>
-          </section>
-
-          {/* GEOGRAPHIC DISTRIBUTION */}
-          <section id="distribution" className="mt-12 scroll-mt-10">
-            <div className="bg-white rounded-3xl border border-slate-200 p-8">
-              <p className="text-sm font-bold text-blue-600 uppercase tracking-wide mb-2">Geographic Range</p>
-              <h2 className="text-3xl font-bold text-slate-900 mb-8">Distribution</h2>
-
-              <div className="mb-8">
-                <h3 className="font-bold text-slate-800 mb-3">Provinces</h3>
-                <div className="flex flex-wrap gap-3">
-                  {provinces.length > 0 ? (
-                    provinces.map((prov) => (
-                      <span key={prov} className="px-4 py-2 bg-blue-50 text-blue-700 rounded-xl font-medium">
-                        {prov}
-                      </span>
-                    ))
-                  ) : (
-                    <p className="text-slate-500">No province information available.</p>
-                  )}
-                </div>
+                <p className="mt-1 text-lg font-semibold text-slate-800">
+                  {family || "Not available"}
+                </p>
               </div>
 
-              <div>
-                <h3 className="font-bold text-slate-800 mb-3">Districts</h3>
-                <div className="flex flex-wrap gap-3">
-                  {districts.length > 0 ? (
-                    districts.map((dist) => (
-                      <span key={dist} className="px-4 py-2 bg-green-50 text-green-700 rounded-xl font-medium">
-                        {dist}
-                      </span>
-                    ))
-                  ) : (
-                    <p className="text-slate-500">No district information available.</p>
-                  )}
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* LOCATION MAP */}
-          <section id="location" className="mt-12 scroll-mt-10">
-            <div className="bg-white rounded-3xl border border-slate-200 p-8">
-              <p className="text-sm font-bold text-red-600 uppercase tracking-wide mb-2">Geographic Location</p>
-              <h2 className="text-3xl font-bold text-slate-900 mb-3">Recorded Locations</h2>
-              <p className="text-slate-500 mb-6">Known coordinate points for {name} in Nepal</p>
-              <SpeciesMap location={species.location} name={name} />
-            </div>
-          </section>
-
-          {/* POPULATION CHART */}
-          <section id="population" className="mt-12 scroll-mt-10">
-            <div className="bg-white rounded-3xl border border-slate-200 p-8">
-              <p className="text-sm font-bold text-purple-600 uppercase tracking-wide mb-2">Population</p>
-
-              <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-8">
-                <div>
-                  <h2 className="text-3xl font-bold text-slate-900">Population Trend</h2>
-                  <p className="text-sm text-slate-500 mt-2">Estimated population trajectory</p>
-                </div>
-
-                {populationTrajectory && (
-                  <div className={`px-4 py-2 rounded-xl text-sm font-bold ${
-                    populationTrajectory.startsWith("+") 
-                      ? "bg-green-50 text-green-700" 
-                      : "bg-red-50 text-red-700"
-                  }`}>
-                    Trend: {populationTrajectory}
-                  </div>
-                )}
-              </div>
-
-              {populationYears.length > 0 ? (
-                <div className="mb-4">
-                  <PopulationChart population={species.population} />
-                </div>
-              ) : (
-                <div className="bg-slate-50 rounded-2xl p-8 text-center">
-                  <p className="text-slate-500">Population trend data not recorded.</p>
-                </div>
+              {description && (
+                <p className="mt-6 max-w-2xl leading-8 text-slate-600">
+                  {description}
+                </p>
               )}
             </div>
-          </section>
-
-          {/* SPATIAL DISTRIBUTION */}
-          <section id="spatial" className="mt-12 scroll-mt-10">
-            <div className="bg-white rounded-3xl border border-slate-200 p-8">
-              <p className="text-sm font-bold text-indigo-600 uppercase tracking-wide mb-2">Social Structure</p>
-              <h2 className="text-3xl font-bold text-slate-900 mb-5">Spatial Distribution</h2>
-              <p className="text-slate-600 leading-8">{spatialDistribution}</p>
-            </div>
-          </section>
-
+          </div>
         </div>
-      </main>
+      </section>
+
+      {/* =====================================================
+          QUICK INFORMATION
+      ===================================================== */}
+
+      <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <InfoCard
+            title="Species"
+            value={commonName}
+          />
+
+          <InfoCard
+            title="Category"
+            value={category}
+          />
+
+          <InfoCard
+            title="IUCN Status"
+            value={iucnStatus}
+          />
+
+          <InfoCard
+            title="Family"
+            value={family}
+          />
+        </div>
+      </section>
+
+      {/* =====================================================
+          ABOUT
+      ===================================================== */}
+
+      {description && (
+        <ContentSection title="About the Species">
+          <p className="leading-8 text-slate-700">
+            {description}
+          </p>
+        </ContentSection>
+      )}
+
+      {/* =====================================================
+          BEHAVIOR
+      ===================================================== */}
+
+      {natureAndActivity && (
+        <ContentSection title="Nature & Activity">
+          <p className="leading-8 text-slate-700">
+            {natureAndActivity}
+          </p>
+        </ContentSection>
+      )}
+
+      {/* =====================================================
+          DIET
+      ===================================================== */}
+
+      {foodAndDiet && (
+        <ContentSection title="Food & Diet">
+          <p className="leading-8 text-slate-700">
+            {foodAndDiet}
+          </p>
+        </ContentSection>
+      )}
+
+      {/* =====================================================
+          DISTRIBUTION
+      ===================================================== */}
+
+      <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <SectionHeading title="Distribution in Nepal" />
+
+        <div className="grid gap-6 md:grid-cols-2">
+          <DistributionCard
+            title="Provinces"
+            items={provinces}
+          />
+
+          <DistributionCard
+            title="Districts"
+            items={districts}
+          />
+        </div>
+      </section>
+
+      {/* =====================================================
+          MAP
+      ===================================================== */}
+
+      <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <SectionHeading title="Species Location" />
+
+        <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white p-2 shadow-sm">
+          <SpeciesMap
+            location={location}
+            name={commonName}
+          />
+        </div>
+      </section>
+
+      {/* =====================================================
+          POPULATION
+      ===================================================== */}
+
+      <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <SectionHeading title="Population Trend" />
+
+        <div className="rounded-3xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
+          <PopulationChart
+            population={population}
+          />
+        </div>
+
+        {population?.trajectory && (
+          <div className="mt-5 rounded-2xl bg-slate-50 p-5">
+            <p className="text-sm font-semibold text-slate-500">
+              Population trajectory
+            </p>
+
+            <p className="mt-2 text-slate-700">
+              {population.trajectory}
+            </p>
+          </div>
+        )}
+      </section>
+
+      {/* =====================================================
+          SPATIAL DISTRIBUTION
+      ===================================================== */}
+
+      {spatialDistribution && (
+        <ContentSection title="Spatial Distribution">
+          <p className="leading-8 text-slate-700">
+            {spatialDistribution}
+          </p>
+        </ContentSection>
+      )}
+
+      {/* =====================================================
+          GALLERY
+      ===================================================== */}
+
+      {images && images.length > 1 && (
+        <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+          <SectionHeading title="Gallery" />
+
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {images.slice(1).map((image, index) => (
+              <div
+                key={`${image}-${index}`}
+                className="overflow-hidden rounded-2xl bg-slate-100"
+              >
+                <img
+                  src={image}
+                  alt={`${commonName} ${index + 2}`}
+                  className="h-64 w-full object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* =====================================================
+          FOOTER SPACE
+      ===================================================== */}
+
+      <div className="h-16" />
+    </main>
+  );
+}
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+function ContentSection({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+      <SectionHeading title={title} />
+
+      <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        {children}
+      </div>
+    </section>
+  );
+}
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+function SectionHeading({
+  title,
+}: {
+  title: string;
+}) {
+  return (
+    <h2 className="mb-6 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+      {title}
+    </h2>
+  );
+}
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+function Badge({
+  text,
+}: {
+  text?: string;
+}) {
+  return (
+    <span className="rounded-full bg-emerald-100 px-4 py-2 text-sm font-semibold text-emerald-700">
+      {text || "Unknown"}
+    </span>
+  );
+}
+
+/* =========================================================
+   STATUS BADGE
+========================================================= */
+
+function StatusBadge({
+  status,
+}: {
+  status?: string;
+}) {
+  const normalizedStatus =
+    status?.toUpperCase() || "UNKNOWN";
+
+  let className =
+    "bg-slate-100 text-slate-700";
+
+  if (normalizedStatus === "CR") {
+    className = "bg-red-100 text-red-700";
+  } else if (normalizedStatus === "EN") {
+    className = "bg-orange-100 text-orange-700";
+  } else if (normalizedStatus === "VU") {
+    className = "bg-yellow-100 text-yellow-700";
+  } else if (normalizedStatus === "NT") {
+    className = "bg-blue-100 text-blue-700";
+  } else if (normalizedStatus === "LC") {
+    className = "bg-green-100 text-green-700";
+  }
+
+  return (
+    <span
+      className={`rounded-full px-4 py-2 text-sm font-semibold ${className}`}
+    >
+      IUCN: {normalizedStatus}
+    </span>
+  );
+}
+
+/* =========================================================
+   INFO CARD
+========================================================= */
+
+function InfoCard({
+  title,
+  value,
+}: {
+  title: string;
+  value?: string;
+}) {
+  return (
+    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <p className="text-sm font-medium text-slate-500">
+        {title}
+      </p>
+
+      <p className="mt-2 truncate text-lg font-bold text-slate-900">
+        {value || "Not available"}
+      </p>
+    </div>
+  );
+}
+
+/* =========================================================
+   DISTRIBUTION CARD
+========================================================= */
+
+function DistributionCard({
+  title,
+  items,
+}: {
+  title: string;
+  items: string[];
+}) {
+  return (
+    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h3 className="text-lg font-bold text-slate-900">
+        {title}
+      </h3>
+
+      {items.length > 0 ? (
+        <div className="mt-5 flex flex-wrap gap-2">
+          {items.map((item) => (
+            <span
+              key={item}
+              className="rounded-full bg-slate-100 px-3 py-2 text-sm text-slate-700"
+            >
+              {item}
+            </span>
+          ))}
+        </div>
+      ) : (
+        <p className="mt-4 text-sm text-slate-500">
+          No information available.
+        </p>
+      )}
     </div>
   );
 }
