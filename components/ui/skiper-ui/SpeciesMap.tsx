@@ -8,7 +8,7 @@ type SpeciesMapProps = {
   name: string;
 };
 
-// 1. Declare sub-components OUTSIDE the parent component to avoid re-creation on render
+// Declared outside parent component
 function MapZoomController({
   active,
   useMap,
@@ -36,7 +36,6 @@ export default function SpeciesMap({ location, name }: SpeciesMapProps) {
   const [mapActive, setMapActive] = useState(false);
 
   useEffect(() => {
-    // Dynamic loading to avoid Leaflet window/document SSR issues
     Promise.all([import("react-leaflet"), import("leaflet")]).then(
       ([reactLeaflet, leaflet]) => {
         setMapComponents({
@@ -122,7 +121,6 @@ export default function SpeciesMap({ location, name }: SpeciesMapProps) {
         scrollWheelZoom={false}
         className="h-[450px] w-full"
       >
-        {/* Pass hook down cleanly without re-declaring component */}
         <MapZoomController active={mapActive} useMap={useMap} />
 
         <TileLayer
