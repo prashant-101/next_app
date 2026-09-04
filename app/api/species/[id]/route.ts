@@ -2,6 +2,10 @@ import { NextResponse } from "next/server";
 import { connectDB } from "@/lib/mongodb";
 import mongoose from "mongoose";
 
+// Force dynamic execution on Vercel to bypass static build caching
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export async function GET(
   request: Request,
   { params }: { params: Promise<{ id: string }> }
@@ -37,8 +41,12 @@ export async function GET(
       );
     }
 
-    // Return the animal directly (or wrapped consistently)
-    return NextResponse.json(animal);
+    // Prevent client-side caching & return the species document
+    return NextResponse.json(animal, {
+      headers: {
+        "Cache-Control": "no-store, max-age=0, must-revalidate",
+      },
+    });
   } catch (error) {
     console.error("Species detail API error:", error);
 
