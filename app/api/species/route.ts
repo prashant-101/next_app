@@ -1,21 +1,12 @@
 import { NextResponse } from "next/server";
-import { connectDB } from "@/lib/mongodb";
+import { getAllSpecies } from "@/lib/species-source";
+
+export const dynamic = "force-dynamic";
 
 export async function GET() {
   try {
-    const mongoose = await connectDB();
-    const db = mongoose.connection.db;
+    const animals = await getAllSpecies();
 
-    if (!db) {
-      throw new Error("Database connection not available");
-    }
-
-    const animals = await db
-      .collection("species")
-      .find({})
-      .toArray();
-
-    // Returning { animals, species } object allows both carousel and analytics components to work
     return NextResponse.json({
       animals,
       species: animals,

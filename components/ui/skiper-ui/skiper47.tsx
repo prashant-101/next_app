@@ -62,11 +62,14 @@ const Skiper47 = () => {
         const response = await fetch("/api/species");
 
         if (!response.ok) {
-          throw new Error("Failed to fetch species");
+          console.error("Failed to fetch species", response.status);
+          return;
         }
 
         const data = await response.json();
-        const animals: Species[] = data.animals || [];
+        const animals: Species[] = Array.isArray(data)
+          ? data
+          : data.animals || data.species || data.data || [];
 
         const carouselImages: CarouselImage[] = animals
           .map((animal) => {

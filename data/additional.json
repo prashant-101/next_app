@@ -1,0 +1,1110 @@
+{
+  
+  "species": [
+    {
+      "id": "king-cobra",
+      "name": "King Cobra",
+      "scientific_name": "Ophiophagus hannah",
+      "display_vulnerability": "VU",
+      "habitat_description": "High hills to lowland forests; usually forest, wetlands and agricultural-edge habitats.",
+      "threats": [
+        "Habitat loss",
+        "persecution",
+        "prey decline",
+        "road mortality",
+        "illegal collection."
+      ],
+      "parts_poached": [
+        "Live animals",
+        "skin/body parts"
+      ],
+      "purpose_of_poaching": "Traditional medicine and illegal exotic-animal trade; uses vary by region.",
+      "black_market_value": "Not reliably documented in a defensible Nepal-wide source; exact trafficking prices omitted.",
+      "article_urls": [],
+      "youtube_video_url": "https://www.youtube.com/watch?v=BMVJ4P0pAXY",
+      "youtube_search_url": "https://www.youtube.com/results?search_query=King+Cobra+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "wild-water-buffalo-arna",
+      "name": "Wild Water Buffalo (Arna)",
+      "scientific_name": "Bubalus arnee",
+      "display_vulnerability": "EN",
+      "habitat_description": "Low Terai floodplains, riverine grasslands, marshes and wetlands; Nepal's wild population is associated with Koshi Tappu.",
+      "threats": [
+        "Habitat conversion",
+        "livestock competition/disease",
+        "hybridization",
+        "hunting."
+      ],
+      "parts_poached": [
+        "Horns",
+        "meat",
+        "live animals"
+      ],
+      "purpose_of_poaching": "Trophy/ornamental horn trade and meat; historical hunting pressure.",
+      "black_market_value": "No reliable current Nepal-wide black-market value located.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Wild+Water+Buffalo+(Arna)+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "gharial",
+      "name": "Gharial",
+      "scientific_name": "Gavialis gangeticus",
+      "display_vulnerability": "CR",
+      "habitat_description": "Low Terai: large rivers with sandbanks, deep pools and suitable nesting/basking sites.",
+      "threats": [
+        "Fishing-net entanglement",
+        "dams/flow alteration",
+        "river pollution",
+        "sand/mineral extraction",
+        "habitat disturbance",
+        "egg collection."
+      ],
+      "parts_poached": [
+        "Eggs",
+        "skin",
+        "live animals"
+      ],
+      "purpose_of_poaching": "Historical medicinal/superstitious uses and illegal collection; eggs were also taken for food.",
+      "black_market_value": "No reliable current Nepal-wide black-market value located.",
+      "article_urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC13435885/",
+        "https://ntnc.org.np/thematic-area/gharial-breeding-center"
+      ],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Gharial+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "asian-elephant",
+      "name": "Asian Elephant",
+      "scientific_name": "Elephas maximus",
+      "display_vulnerability": "EN",
+      "habitat_description": "Low Terai and foothill forests, river valleys and grasslands; seasonal movement between forest and water/forage areas.",
+      "threats": [
+        "Habitat fragmentation",
+        "human-elephant conflict",
+        "crop loss",
+        "infrastructure",
+        "illegal capture/trade."
+      ],
+      "parts_poached": [
+        "Ivory/tusks, skin, tail hair",
+        "live calves"
+      ],
+      "purpose_of_poaching": "Ivory and other body-part trade; live capture historically.",
+      "black_market_value": "No reliable current Nepal-specific black-market value located.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Asian+Elephant+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "great-hornbill",
+      "name": "Great Hornbill",
+      "scientific_name": "Buceros bicornis",
+      "display_vulnerability": "VU",
+      "habitat_description": "Lowland and foothill forests, especially mature forest with large nesting trees.",
+      "threats": [
+        "Forest loss",
+        "loss of nesting trees",
+        "hunting",
+        "disturbance."
+      ],
+      "parts_poached": [
+        "Casque, feathers, meat",
+        "live birds"
+      ],
+      "purpose_of_poaching": "Ornamental/cultural use and local hunting; live-bird trade.",
+      "black_market_value": "No reliable current Nepal-specific black-market value located.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Great+Hornbill+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "golden-mahseer",
+      "name": "Golden Mahseer",
+      "scientific_name": "Tor putitora",
+      "display_vulnerability": "EN",
+      "habitat_description": "Foothill rivers and tributaries; fast-flowing Himalayan rivers and clean spawning/rearing habitat.",
+      "threats": [
+        "Dams",
+        "water abstraction",
+        "pollution",
+        "sedimentation",
+        "sand mining",
+        "overfishing and poaching."
+      ],
+      "parts_poached": [
+        "Whole fish"
+      ],
+      "purpose_of_poaching": "Food and recreational/illegal fishing markets.",
+      "black_market_value": "No reliable current Nepal-wide black-market value located.",
+      "article_urls": [],
+      "youtube_video_url": "https://www.youtube.com/watch?v=9OZtTOiTtCQ",
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Golden+Mahseer+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "indian-pangolin",
+      "name": "Indian Pangolin",
+      "scientific_name": "Manis crassicaudata",
+      "display_vulnerability": "EN",
+      "habitat_description": "Lowland Terai through lower hills; burrows in forest, grassland and agricultural mosaics.",
+      "threats": [
+        "Illegal trade",
+        "habitat loss",
+        "road mortality and persecution."
+      ],
+      "parts_poached": [
+        "Scales",
+        "meat",
+        "whole animals"
+      ],
+      "purpose_of_poaching": "Scales are trafficked for traditional-medicine markets; meat is also consumed in some illicit markets.",
+      "black_market_value": "Nepal seizure research reported historical local/international values, but prices are highly variable; do not use as a live price benchmark.",
+      "article_urls": [
+        "https://www.sciencedirect.com/science/article/pii/S235198942100490X"
+      ],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Indian+Pangolin+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "ganges-river-dolphin",
+      "name": "Ganges River Dolphin",
+      "scientific_name": "Platanista gangetica",
+      "display_vulnerability": "EN",
+      "habitat_description": "Low Terai river systems, especially deep flowing channels and confluences.",
+      "threats": [
+        "Dams",
+        "reduced dry-season flow",
+        "fishing-net entanglement",
+        "pollution",
+        "boat traffic and hunting."
+      ],
+      "parts_poached": [
+        "Oil/fat",
+        "meat",
+        "whole animals"
+      ],
+      "purpose_of_poaching": "Historical/local use of oil and meat; accidental and intentional capture.",
+      "black_market_value": "No reliable current Nepal-specific black-market value located.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Ganges+River+Dolphin+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "dhole-asiatic-wild-dog",
+      "name": "Dhole (Asiatic Wild Dog)",
+      "scientific_name": "Cuon alpinus",
+      "display_vulnerability": "EN",
+      "habitat_description": "Forests and grasslands from Terai to mid-hills; broad prey-rich landscapes.",
+      "threats": [
+        "Prey depletion",
+        "habitat fragmentation",
+        "disease from domestic dogs",
+        "conflict and persecution."
+      ],
+      "parts_poached": [
+        "Skin",
+        "body",
+        "live animals"
+      ],
+      "purpose_of_poaching": "Illegal skin/body-part trade and persecution.",
+      "black_market_value": "No reliable current Nepal-specific black-market value located.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Dhole+(Asiatic+Wild+Dog)+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "himalayan-brown-bear",
+      "name": "Himalayan Brown Bear",
+      "scientific_name": "Ursus arctos",
+      "display_vulnerability": "CR (app label)",
+      "habitat_description": "High Himalayan and alpine/subalpine landscapes, generally above the tree line and in mountain valleys.",
+      "threats": [
+        "Habitat disturbance",
+        "livestock conflict",
+        "retaliatory killing",
+        "illegal hunting and prey/resource decline."
+      ],
+      "parts_poached": [
+        "Bile, paws, gall bladder, skin",
+        "meat"
+      ],
+      "purpose_of_poaching": "Traditional medicine and illegal body-part trade.",
+      "black_market_value": "No reliable current Nepal-specific black-market value located.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Himalayan+Brown+Bear+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "white-rumped-vulture",
+      "name": "White-rumped Vulture",
+      "scientific_name": "Gyps bengalensis",
+      "display_vulnerability": "CR",
+      "habitat_description": "Low Terai and foothills; open country near livestock, roosts and nesting trees.",
+      "threats": [
+        "Veterinary diclofenac and other toxic NSAIDs",
+        "food shortage",
+        "habitat loss",
+        "poisoning and disturbance."
+      ],
+      "parts_poached": [
+        "Whole birds",
+        "feathers"
+      ],
+      "purpose_of_poaching": "Collection is not the principal Nepal threat; poisoning and mortality are the major conservation concern.",
+      "black_market_value": "Not applicable as a meaningful conservation-market value; no reliable current trade price.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=White-rumped+Vulture+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "red-panda",
+      "name": "Red Panda",
+      "scientific_name": "Ailurus fulgens",
+      "display_vulnerability": "EN",
+      "habitat_description": "High hills and eastern Himalayan temperate forests, commonly bamboo-rich habitats around 2,200–4,800 m.",
+      "threats": [
+        "Habitat fragmentation",
+        "bamboo decline",
+        "livestock grazing",
+        "dogs",
+        "accidental trapping and illegal trade."
+      ],
+      "parts_poached": [
+        "Skin/fur",
+        "live animals"
+      ],
+      "purpose_of_poaching": "Illegal pet/live-animal trade and fur/skin trade.",
+      "black_market_value": "No reliable current Nepal-wide black-market value located.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Red+Panda+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "burmese-python",
+      "name": "Burmese Python",
+      "scientific_name": "Python bivittatus",
+      "display_vulnerability": "VU",
+      "habitat_description": "Low Terai forests, wetlands, grasslands and riverine habitats.",
+      "threats": [
+        "Habitat loss",
+        "persecution",
+        "hunting and illegal collection."
+      ],
+      "parts_poached": [
+        "Skin",
+        "meat",
+        "live animals"
+      ],
+      "purpose_of_poaching": "Leather, meat and exotic-animal trade.",
+      "black_market_value": "No reliable current Nepal-specific black-market value located.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Burmese+Python+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "imperial-heron",
+      "name": "Imperial Heron",
+      "scientific_name": "Ardea insignis",
+      "display_vulnerability": "CR",
+      "habitat_description": "High-altitude Himalayan river valleys and wetlands, generally around clear, fast-flowing rivers and secluded banks.",
+      "threats": [
+        "River disturbance",
+        "hydropower/infrastructure",
+        "wetland degradation",
+        "human disturbance and small population size."
+      ],
+      "parts_poached": [
+        "Whole birds",
+        "eggs"
+      ],
+      "purpose_of_poaching": "Historically hunted/collected locally; current major concern is habitat and disturbance rather than a documented market.",
+      "black_market_value": "No reliable current Nepal-specific black-market value located.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Imperial+Heron+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "clouded-leopard",
+      "name": "Clouded Leopard",
+      "scientific_name": "Neofelis nebulosa",
+      "display_vulnerability": "VU",
+      "habitat_description": "Forest from lowland Terai/foothills into subtropical and temperate forest.",
+      "threats": [
+        "Deforestation",
+        "prey depletion",
+        "retaliatory killing and illegal wildlife trade."
+      ],
+      "parts_poached": [
+        "Skin/fur",
+        "bones",
+        "teeth",
+        "whole animals"
+      ],
+      "purpose_of_poaching": "Fur/skin and traditional-medicine trade.",
+      "black_market_value": "No reliable current Nepal-specific black-market value located.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Clouded+Leopard+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "bengal-tiger",
+      "name": "Bengal Tiger",
+      "scientific_name": "Panthera tigris tigris",
+      "display_vulnerability": "EN",
+      "habitat_description": "Low Terai forests and grasslands, including protected landscapes such as Chitwan, Bardia and Shuklaphanta.",
+      "threats": [
+        "Poaching",
+        "prey depletion",
+        "habitat fragmentation",
+        "human conflict and illegal trade."
+      ],
+      "parts_poached": [
+        "Skin",
+        "bones",
+        "claws",
+        "teeth",
+        "whiskers",
+        "other body parts"
+      ],
+      "purpose_of_poaching": "Illegal traditional-medicine and luxury/ornamental markets.",
+      "black_market_value": "No live trafficking price supplied; values vary widely by route and seizure context.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Bengal+Tiger+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "gaur-wild-bison",
+      "name": "Gaur (Wild Bison)",
+      "scientific_name": "Bos gaurus",
+      "display_vulnerability": "VU",
+      "habitat_description": "Low Terai and foothill forests/grasslands; prefers productive forest-edge and grassland mosaics.",
+      "threats": [
+        "Habitat loss",
+        "livestock competition/disease",
+        "hunting and fragmentation."
+      ],
+      "parts_poached": [
+        "Horns",
+        "meat",
+        "hide"
+      ],
+      "purpose_of_poaching": "Meat and trophy/ornamental horn trade.",
+      "black_market_value": "No reliable current Nepal-specific black-market value located.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Gaur+(Wild+Bison)+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "himalayan-musk-deer",
+      "name": "Himalayan Musk Deer",
+      "scientific_name": "Moschus leucogaster",
+      "display_vulnerability": "EN",
+      "habitat_description": "High Himalayan and subalpine conifer/rhododendron forests and alpine scrub.",
+      "threats": [
+        "Poaching for musk",
+        "habitat loss",
+        "livestock pressure and disturbance."
+      ],
+      "parts_poached": [
+        "Musk pod",
+        "skin",
+        "meat"
+      ],
+      "purpose_of_poaching": "Musk is highly valued in traditional medicine and perfumery.",
+      "black_market_value": "No current price benchmark supplied because values vary and publishing a trafficking price can encourage illegal trade.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Himalayan+Musk+Deer+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "himalayan-salamander",
+      "name": "Himalayan Salamander",
+      "scientific_name": "Tylototriton verrucosus",
+      "display_vulnerability": "EN (app label)",
+      "habitat_description": "Mid- to high-elevation wetlands, ponds, streams and moist forest habitats in the Himalaya.",
+      "threats": [
+        "Wetland loss",
+        "pollution",
+        "collection",
+        "disease and climate-related habitat change."
+      ],
+      "parts_poached": [
+        "Live animals"
+      ],
+      "purpose_of_poaching": "Collection for the pet/animal trade and local use in some areas.",
+      "black_market_value": "No reliable current Nepal-specific black-market value located.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Himalayan+Salamander+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "lesser-florican",
+      "name": "Lesser Florican",
+      "scientific_name": "Sypheotides indicus",
+      "display_vulnerability": "CR",
+      "habitat_description": "Low Terai grasslands and open agricultural landscapes; seasonal grassland specialist.",
+      "threats": [
+        "Grassland conversion",
+        "intensive agriculture",
+        "disturbance",
+        "hunting and altered fire/grazing regimes."
+      ],
+      "parts_poached": [
+        "Whole birds",
+        "eggs"
+      ],
+      "purpose_of_poaching": "Historical hunting; current concern includes habitat loss and illegal hunting.",
+      "black_market_value": "No reliable current Nepal-specific black-market value located.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Lesser+Florican+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "hispid-hare",
+      "name": "Hispid Hare",
+      "scientific_name": "Caprolagus hispidus",
+      "display_vulnerability": "EN",
+      "habitat_description": "Low Terai alluvial tall-grasslands, especially riverine and floodplain grassland.",
+      "threats": [
+        "Grassland conversion",
+        "burning",
+        "grazing",
+        "invasive plants and hunting."
+      ],
+      "parts_poached": [
+        "Meat",
+        "skin"
+      ],
+      "purpose_of_poaching": "Local hunting/food; no major documented international market.",
+      "black_market_value": "No reliable current Nepal-specific black-market value located.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Hispid+Hare+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "slender-billed-vulture",
+      "name": "Slender-billed Vulture",
+      "scientific_name": "Gyps tenuirostris",
+      "display_vulnerability": "CR",
+      "habitat_description": "Low Terai and open agricultural/grassland landscapes where carrion is available.",
+      "threats": [
+        "Veterinary NSAID poisoning",
+        "food shortage",
+        "poisoning and habitat disturbance."
+      ],
+      "parts_poached": [
+        "Whole birds",
+        "feathers"
+      ],
+      "purpose_of_poaching": "Not a principal trade target; mortality from toxic veterinary drugs is the major concern.",
+      "black_market_value": "No reliable current trade price located.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Slender-billed+Vulture+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "greater-one-horned-rhino",
+      "name": "Greater One-horned Rhino",
+      "scientific_name": "Rhinoceros unicornis",
+      "display_vulnerability": "VU",
+      "habitat_description": "Low Terai floodplains, alluvial grasslands, riverine forests and wetlands.",
+      "threats": [
+        "Poaching",
+        "habitat change",
+        "invasive plants",
+        "floods and human-wildlife conflict."
+      ],
+      "parts_poached": [
+        "Horn",
+        "skin",
+        "other body parts"
+      ],
+      "purpose_of_poaching": "Horn is trafficked for traditional-medicine and status markets.",
+      "black_market_value": "No live trafficking price supplied; seizure-based prices are unreliable and can enable trafficking.",
+      "article_urls": [],
+      "youtube_video_url": "https://www.youtube.com/watch?v=s5_U-M5JYg8",
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Greater+One-horned+Rhino+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "swamp-deer-barasingha",
+      "name": "Swamp Deer (Barasingha)",
+      "scientific_name": "Rucervus duvaucelii",
+      "display_vulnerability": "VU",
+      "habitat_description": "Low Terai marshes, floodplains and tall grasslands.",
+      "threats": [
+        "Wetland/grassland conversion",
+        "habitat fragmentation",
+        "hunting and competition with livestock."
+      ],
+      "parts_poached": [
+        "Antlers",
+        "meat",
+        "hide"
+      ],
+      "purpose_of_poaching": "Meat and trophy/antler trade.",
+      "black_market_value": "No reliable current Nepal-specific black-market value located.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Swamp+Deer+(Barasingha)+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "yellow-headed-tortoise",
+      "name": "Yellow-headed Tortoise",
+      "scientific_name": "Indotestudo elongata",
+      "display_vulnerability": "CR",
+      "habitat_description": "Lowland and foothill forest, dry deciduous forest and scrub, usually near seasonal water.",
+      "threats": [
+        "Collection for meat/pet trade",
+        "habitat loss",
+        "fire and agricultural expansion."
+      ],
+      "parts_poached": [
+        "Whole tortoise",
+        "meat",
+        "shell"
+      ],
+      "purpose_of_poaching": "Food and illegal pet/wildlife trade.",
+      "black_market_value": "No reliable current Nepal-specific black-market value located.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Yellow-headed+Tortoise+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "wild-yak",
+      "name": "Wild Yak",
+      "scientific_name": "Bos mutus",
+      "display_vulnerability": "VU",
+      "habitat_description": "High Himalaya, alpine meadows and cold desert above the tree line.",
+      "threats": [
+        "Livestock competition",
+        "hybridization",
+        "hunting",
+        "disturbance and climate change."
+      ],
+      "parts_poached": [
+        "Meat",
+        "horns",
+        "hide",
+        "tail hair"
+      ],
+      "purpose_of_poaching": "Meat and trophy/ornamental products.",
+      "black_market_value": "No reliable current Nepal-specific black-market value located.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Wild+Yak+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "asian-giant-softshell-turtle",
+      "name": "Asian Giant Softshell Turtle",
+      "scientific_name": "Pelochelys cantorii",
+      "display_vulnerability": "CR",
+      "habitat_description": "Low Terai rivers, deep pools, sandy banks and large freshwater systems.",
+      "threats": [
+        "Egg collection",
+        "fishing",
+        "river modification",
+        "sand mining",
+        "pollution and habitat disturbance."
+      ],
+      "parts_poached": [
+        "Meat",
+        "eggs",
+        "shell",
+        "live animals"
+      ],
+      "purpose_of_poaching": "Food and traditional-use markets; illegal collection.",
+      "black_market_value": "No reliable current Nepal-specific black-market value located.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Asian+Giant+Softshell+Turtle+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "tibetan-antelope-chiru",
+      "name": "Tibetan Antelope (Chiru)",
+      "scientific_name": "Pantholops hodgsonii",
+      "display_vulnerability": "NT",
+      "habitat_description": "High Himalayan/Tibetan plateau; in Nepal mainly associated with very high-altitude trans-Himalayan landscapes.",
+      "threats": [
+        "Poaching",
+        "habitat disturbance and historical demand for wool."
+      ],
+      "parts_poached": [
+        "Fine underfur (shahtoosh)",
+        "whole skins"
+      ],
+      "purpose_of_poaching": "Shahtoosh shawl production; international trade is prohibited.",
+      "black_market_value": "No current trafficking price supplied.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Tibetan+Antelope+(Chiru)+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "red-headed-vulture",
+      "name": "Red-headed Vulture",
+      "scientific_name": "Sarcogyps calvus",
+      "display_vulnerability": "CR",
+      "habitat_description": "Lowland Terai and foothill open country, woodland edges and areas with livestock/carrion.",
+      "threats": [
+        "Poisoning",
+        "food shortage",
+        "habitat loss and veterinary-drug contamination."
+      ],
+      "parts_poached": [
+        "Whole birds",
+        "feathers"
+      ],
+      "purpose_of_poaching": "Not a major trade target; poisoning is the major conservation concern.",
+      "black_market_value": "No reliable current trade price located.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Red-headed+Vulture+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "snow-leopard",
+      "name": "Snow Leopard",
+      "scientific_name": "Panthera uncia",
+      "display_vulnerability": "VU",
+      "habitat_description": "High Himalaya and alpine/subalpine zones, usually rugged terrain above the tree line.",
+      "threats": [
+        "Retaliatory killing",
+        "prey depletion",
+        "livestock conflict",
+        "habitat/climate change and illegal trade."
+      ],
+      "parts_poached": [
+        "Skin/fur",
+        "bones",
+        "teeth/claws"
+      ],
+      "purpose_of_poaching": "Fur/skin and traditional-medicine trade.",
+      "black_market_value": "No live trafficking price supplied.",
+      "article_urls": [],
+      "youtube_video_url": "https://www.youtube.com/watch?v=6qcLZiH_hIs",
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Snow+Leopard+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "sarus-crane",
+      "name": "Sarus Crane",
+      "scientific_name": "Antigone antigone",
+      "display_vulnerability": "VU",
+      "habitat_description": "Low Terai wetlands, marshes, floodplains and agricultural landscapes near shallow water.",
+      "threats": [
+        "Wetland loss",
+        "agricultural intensification",
+        "power-line collision",
+        "disturbance and nest loss."
+      ],
+      "parts_poached": [
+        "Eggs",
+        "chicks",
+        "whole birds"
+      ],
+      "purpose_of_poaching": "Occasional capture/collection; habitat loss is the larger threat.",
+      "black_market_value": "No reliable current Nepal-specific black-market value located.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Sarus+Crane+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "blackbuck",
+      "name": "Blackbuck",
+      "scientific_name": "Antilope cervicapra",
+      "display_vulnerability": "NT (app label)",
+      "habitat_description": "Low Terai open grasslands, savanna-like habitat and agricultural mosaics.",
+      "threats": [
+        "Habitat conversion",
+        "hunting",
+        "disturbance and fragmentation."
+      ],
+      "parts_poached": [
+        "Horns",
+        "meat",
+        "skin"
+      ],
+      "purpose_of_poaching": "Meat and trophy/horn trade.",
+      "black_market_value": "No reliable current Nepal-specific black-market value located.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Blackbuck+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "four-horned-antelope",
+      "name": "Four-horned Antelope",
+      "scientific_name": "Tetracerus quadricornis",
+      "display_vulnerability": "VU",
+      "habitat_description": "Low Terai dry deciduous forest, scrub and open woodland/grassland mosaics.",
+      "threats": [
+        "Habitat loss",
+        "hunting and fragmentation."
+      ],
+      "parts_poached": [
+        "Horns",
+        "meat",
+        "skin"
+      ],
+      "purpose_of_poaching": "Meat and trophy trade.",
+      "black_market_value": "No reliable current Nepal-specific black-market value located.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Four-horned+Antelope+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "himalayan-musk-shrew",
+      "name": "Himalayan Musk Shrew",
+      "scientific_name": "Suncus stoliczkanus",
+      "display_vulnerability": "DD/TH (app label)",
+      "habitat_description": "Himalayan foothills and montane habitats; exact Nepal distribution/ecology requires further verification.",
+      "threats": [
+        "Habitat degradation and insufficient ecological knowledge; no strong Nepal-specific trafficking evidence located."
+      ],
+      "parts_poached": [
+        "No consistently documented poached part."
+      ],
+      "purpose_of_poaching": "No established commercial purpose documented in reliable Nepal sources.",
+      "black_market_value": "Not established.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Himalayan+Musk+Shrew+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "himalayan-wolf",
+      "name": "Himalayan Wolf",
+      "scientific_name": "Canis lupus chanco",
+      "display_vulnerability": "VU (app label)",
+      "habitat_description": "High Himalayan alpine and trans-Himalayan landscapes, including cold deserts and high valleys.",
+      "threats": [
+        "Prey depletion",
+        "livestock conflict",
+        "persecution and habitat/climate change."
+      ],
+      "parts_poached": [
+        "Skin/fur",
+        "body parts"
+      ],
+      "purpose_of_poaching": "Fur/skin and retaliatory killing; trade evidence is limited compared with larger carnivores.",
+      "black_market_value": "No reliable current Nepal-specific black-market value located.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Himalayan+Wolf+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "fishing-cat",
+      "name": "Fishing Cat",
+      "scientific_name": "Prionailurus viverrinus",
+      "display_vulnerability": "VU",
+      "habitat_description": "Low Terai wetlands, marshes, oxbow lakes, rivers and wet grassland.",
+      "threats": [
+        "Wetland loss",
+        "prey depletion",
+        "retaliatory killing",
+        "roads and illegal hunting."
+      ],
+      "parts_poached": [
+        "Skin",
+        "body",
+        "live animals"
+      ],
+      "purpose_of_poaching": "Fur/skin and illegal wildlife trade; local persecution.",
+      "black_market_value": "No reliable current Nepal-specific black-market value located.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Fishing+Cat+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "kalo-salak",
+      "name": "Kalo salak (Farmer's quiet helper)",
+      "scientific_name": "Manis pentadactyla",
+      "display_vulnerability": "CR",
+      "habitat_description": "Mid-hills and lowland forest/agricultural mosaics; burrowing species.",
+      "threats": [
+        "Illegal trade",
+        "habitat loss and accidental killing."
+      ],
+      "parts_poached": [
+        "Scales",
+        "meat",
+        "whole animals"
+      ],
+      "purpose_of_poaching": "Scales are trafficked for traditional-medicine markets; meat is also consumed in illicit trade.",
+      "black_market_value": "Nepal pangolin seizure research documents trade values, but no live price benchmark is supplied.",
+      "article_urls": [
+        "https://www.sciencedirect.com/science/article/pii/S235198942100490X"
+      ],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Kalo+salak+(Farmer's+quiet+helper)+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "smooth-coated-otter",
+      "name": "Smooth-coated Otter",
+      "scientific_name": "Lutrogale perspicillata",
+      "display_vulnerability": "VU",
+      "habitat_description": "Low Terai rivers, lakes, marshes, reservoirs and other productive freshwater wetlands.",
+      "threats": [
+        "Wetland loss",
+        "water pollution",
+        "prey depletion",
+        "fishing conflict and hunting."
+      ],
+      "parts_poached": [
+        "Pelt/skin",
+        "live animals"
+      ],
+      "purpose_of_poaching": "Fur and illegal live-animal trade.",
+      "black_market_value": "No reliable current Nepal-specific black-market value located.",
+      "article_urls": [],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Smooth-coated+Otter+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "bengal-florican",
+      "name": "Bengal Florican",
+      "scientific_name": "Houbaropsis bengalensis",
+      "display_vulnerability": "CR",
+      "habitat_description": "Low Terai alluvial grasslands; key Nepal sites include Koshi Tappu, Chitwan and Shuklaphanta.",
+      "threats": [
+        "Grassland loss/modification",
+        "inappropriate burning",
+        "disturbance",
+        "overgrazing",
+        "trapping/hunting and pesticide exposure."
+      ],
+      "parts_poached": [
+        "Whole birds",
+        "eggs"
+      ],
+      "purpose_of_poaching": "Historical hunting; current illegal hunting/trapping is a documented threat.",
+      "black_market_value": "No reliable current Nepal-specific black-market value located.",
+      "article_urls": [
+        "https://www.cambridge.org/core/journals/oryx/article/bengal-florican-its-conservation-in-nepal/55B96F4E6F906F9C39FFA29AE699C991",
+        "https://www.nepjol.info/index.php/njz/article/view/74929"
+      ],
+      "youtube_video_url": null,
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Bengal+Florican+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    },
+    {
+      "id": "rara-snowtrout",
+      "name": "Rara Snowtrout",
+      "scientific_name": "Schizothorax raraensis",
+      "display_vulnerability": "CR",
+      "habitat_description": "High-altitude Rara Lake and connected cold-water habitats in Mugu; gravel/littoral zones and spawning streams.",
+      "threats": [
+        "Overfishing",
+        "pollution",
+        "altered water quality/flow",
+        "invasive species and climate change."
+      ],
+      "parts_poached": [
+        "Whole fish"
+      ],
+      "purpose_of_poaching": "Food fishery and local capture.",
+      "black_market_value": "No reliable current Nepal-specific black-market value located.",
+      "article_urls": [
+        "https://www.iucnsos.org/projects/understanding-how-environmental-variables-influence-critically-endangered-fish-in-the-karnali-river/"
+      ],
+      "youtube_video_url": "https://www.youtube.com/watch?v=SOv79dOfISk",
+      "youtube_search_url": "https://www.youtube.com/results?search_query=Rara+Snowtrout+Nepal+wildlife",
+      "source_details": {
+        "primary_source": "IUCN Red List assessment / species account where available",
+        "regional_source": "Nepal wildlife/conservation literature and government or conservation sources",
+        "data_note": "Habitat and threat fields are conservation summaries; verify against the latest IUCN assessment before publishing as authoritative."
+      }
+    }
+  ]
+}

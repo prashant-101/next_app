@@ -1,0 +1,1483 @@
+[
+  {
+    "id": "himalayan-salamander",
+    "commonName": "Himalayan Salamander",
+    "scientificName": "Tylototriton verrucosus",
+    "category": "Amphibian",
+    "iucnStatus": "EN",
+    "family": "Salamandridae",
+    "population": {
+      "2000": 1500,
+      "2005": 1100,
+      "2010": 800,
+      "2015": 500,
+      "2020": 300,
+      "2026": 180,
+      "trajectory": "-88.0%"
+    },
+    "location": "27.0050, 87.9317",
+    "foodAndDiet": "Carnivore; small insects, earthworms, aquatic larvae, snails, and spiders.",
+    "natureAndActivity": "Only salamander species in Nepal; slow-moving, nocturnal, secretive amphibian seeking shelter under logs/rocks.",
+    "spatialDistribution": "Solitary during land phase; gathers in small groups in natural ponds during monsoon breeding.",
+    "distribution": {
+      "provinces": [
+        "Province No. 1"
+      ],
+      "districts": [
+        "Ilam"
+      ]
+    },
+    "description": "Only salamander species in Nepal; slow-moving, nocturnal, secretive amphibian seeking shelter under logs/rocks.",
+    "images": [
+      "/wildlife/animals/Himalayan_Salamander.jpg",
+      "/wildlife/animals/Himalayan_Salamander1.jpg",
+      "/wildlife/animals/Himalayan_Salamander2.jpg",
+      "/wildlife/animals/Himalayan_Salamander3.jpg"
+    ]
+  },
+  {
+    "id": "king-cobra",
+    "commonName": "King Cobra",
+    "scientificName": "Ophiophagus hannah",
+    "category": "Reptile",
+    "iucnStatus": "VU",
+    "family": "Elapidae",
+    "population": {
+      "2000": 1200,
+      "2005": 950,
+      "2010": 750,
+      "2015": 550,
+      "2020": 400,
+      "2026": 300,
+      "trajectory": "-75.0%"
+    },
+    "location": "28.2089, 83.9856 | 27.4333, 85.0000",
+    "foodAndDiet": "Carnivore/Ophiophagous; feeds almost exclusively on other snakes (ratsnakes, pit vipers, pythons) and monitor lizards.",
+    "natureAndActivity": "World's longest venomous snake; diurnal and active hunter. Female builds a leaf-litter nest to incubate eggs.",
+    "spatialDistribution": "Solitary.",
+    "distribution": {
+      "provinces": [
+        "Gandaki Province",
+        "Bagmati Province"
+      ],
+      "districts": [
+        "Kaski",
+        "Kathmandu"
+      ]
+    },
+    "description": "World's longest venomous snake; diurnal and active hunter. Female builds a leaf-litter nest to incubate eggs.",
+    "images": [
+      "/wildlife/animals/King_Cobra1.jpg",
+     "/wildlife/animals/King_Cobra2.jpg",
+      "/wildlife/animals/King_Cobra3.jpg",
+      
+      "/wildlife/animals/King_Cobra.jpg"
+    ]
+  },
+  {
+    "id": "rara-snowtrout",
+    "commonName": "Rara Snowtrout",
+    "scientificName": "Schizothorax raraensis",
+    "category": "Fish",
+    "iucnStatus": "CR",
+    "family": "Cyprinidae",
+    "population": {
+      "2000": 2000,
+      "2005": 1500,
+      "2010": 1000,
+      "2015": 600,
+      "2020": 350,
+      "2026": 200,
+      "trajectory": "-90.0%"
+    },
+    "location": "29.5333, 82.0833",
+    "foodAndDiet": "Omnivore; feeds on zooplankton, benthic invertebrates, micro-algae, and detritus.",
+    "natureAndActivity": "Cold-water lacustrine fish species adapted to clear, oligotrophic high-altitude lake water.",
+    "spatialDistribution": "solitary",
+    "distribution": {
+      "provinces": [
+        "Karnali Province"
+      ],
+      "districts": [
+        "Mugu"
+      ]
+    },
+    "description": "Cold-water lacustrine fish species adapted to clear, oligotrophic high-altitude lake water.",
+    "images": [
+      "/wildlife/fishes/Rara_Snowtrout.jpg",
+      "/wildlife/fishes/Rara_Snowtrout1.jpg",
+      "/wildlife/fishes/Rara_Snowtrout2.jpg",
+      "/wildlife/fishes/Rara_Snowtrout3.jpg"
+    ]
+  },
+  {
+    "id": "burmese-python",
+    "commonName": "Burmese Python",
+    "scientificName": "Python bivittatus",
+    "category": "Reptile",
+    "iucnStatus": "VU",
+    "family": "Pythonidae",
+    "population": {
+      "2000": 2500,
+      "2005": 2000,
+      "2010": 1700,
+      "2015": 1400,
+      "2020": 1200,
+      "2026": 1000,
+      "trajectory": "-60.0%"
+    },
+    "location": "27.5333, 84.3333 | 28.8500, 80.2000",
+    "foodAndDiet": "Carnivore; constrictor feeding on birds, waterfowl, hares, deer, wild pigs, and rodents.",
+    "natureAndActivity": "Large, non-venomous, slow-moving reptile; semi-aquatic swimmer and climber. Crepuscular and nocturnal.",
+    "spatialDistribution": "Solitary.",
+    "distribution": {
+      "provinces": [
+        "Bagmati Province",
+        "Sudurpashchim Province"
+      ],
+      "districts": [
+        "Chitwan",
+        "Kanchanpur"
+      ]
+    },
+    "description": "Large, non-venomous, slow-moving reptile; semi-aquatic swimmer and climber. Crepuscular and nocturnal.",
+    "images": [
+      "/wildlife/animals/Burmese_Python.jpg",
+      "/wildlife/animals/Burmese_Python1.jpg",
+      "/wildlife/animals/Burmese_Python2.jpg",
+      "/wildlife/animals/Burmese_Python3.jpg"
+    ]
+  },
+  {
+    "id": "yellow-headed-tortoise",
+    "commonName": "Yellow-headed Tortoise",
+    "scientificName": "Indotestudo elongata",
+    "category": "Reptile",
+    "iucnStatus": "CR",
+    "family": "Testudinidae",
+    "population": {
+      "2000": 600,
+      "2005": 450,
+      "2010": 300,
+      "2015": 200,
+      "2020": 120,
+      "2026": 80,
+      "trajectory": "-86.7%"
+    },
+    "location": "27.2500, 84.9167 | 27.5167, 84.4000",
+    "foodAndDiet": "Herbivore/Fungivore; fallen fruits, leafy vegetation, mushrooms, shoots, and occasionally carrion.",
+    "natureAndActivity": "Terrestrial tortoise; active during dawn and dusk, especially following rain showers. Estivates underground when hot.",
+    "spatialDistribution": "Solitary.",
+    "distribution": {
+      "provinces": [
+        "Bagmati Province"
+      ],
+      "districts": [
+        "Chitwan",
+        "Makwanpur"
+      ]
+    },
+    "description": "Terrestrial tortoise; active during dawn and dusk, especially following rain showers. Estivates underground when hot.",
+    "images": [
+      "/wildlife/animals/Yellow-headed_Tortoise.jpg",
+      "/wildlife/animals/Yellow-headed_Tortoise1.jpg",
+      "/wildlife/animals/Yellow-headed_Tortoise2.jpg",
+      "/wildlife/animals/Yellow-headed_Tortoise3.jpg"
+    ]
+  },
+  {
+    "id": "lesser-florican",
+    "commonName": "Lesser Florican",
+    "scientificName": "Sypheotides indicus",
+    "category": "Bird",
+    "iucnStatus": "CR",
+    "family": "Otididae",
+    "population": {
+      "2000": 60,
+      "2005": 50,
+      "2010": 35,
+      "2015": 25,
+      "2020": 18,
+      "2026": 12,
+      "trajectory": "-80.0%"
+    },
+    "location": "28.3833, 81.3167",
+    "foodAndDiet": "Omnivore; grasshoppers, beetles, plant shoots, seeds, and small frogs.",
+    "natureAndActivity": "Small terrestrial bustard; males perform high vertical leaping displays in tall grass during monsoons. Nocturnal/crepuscular.",
+    "spatialDistribution": "Solitary.",
+    "distribution": {
+      "provinces": [
+        "Lumbini Province"
+      ],
+      "districts": [
+        "Bardiya"
+      ]
+    },
+    "description": "Small terrestrial bustard; males perform high vertical leaping displays in tall grass during monsoons. Nocturnal/crepuscular.",
+    "images": [
+      "/wildlife/animals/Lesser_Florican.jpg",
+      "/wildlife/animals/Lesser_Florican1.jpg",
+      "/wildlife/animals/Lesser_Florican2.jpg",
+      "/wildlife/animals/Lesser_Florican3.jpg"
+    ]
+  },
+  {
+    "id": "imperial-heron",
+    "commonName": "Imperial Heron",
+    "scientificName": "Ardea insignis",
+    "category": "Bird",
+    "iucnStatus": "CR",
+    "family": "Ardeidae",
+    "population": {
+      "2000": 35,
+      "2005": 30,
+      "2010": 25,
+      "2015": 20,
+      "2020": 15,
+      "2026": 12,
+      "trajectory": "-65.7%"
+    },
+    "location": "26.9167, 87.1667",
+    "foodAndDiet": "Carnivore/piscivore; hunts large fish, crabs, and aquatic organisms along undisturbed river margins.",
+    "natureAndActivity": "Tall, solitary wading bird; extremely shy and sensitive to human disturbance. Active during low light hours (crepuscular).",
+    "spatialDistribution": "Solitary; strictly avoids crowded habitats.",
+    "distribution": {
+      "provinces": [
+        "Province No. 1"
+      ],
+      "districts": [
+        "Jhapa"
+      ]
+    },
+    "description": "Tall, solitary wading bird; extremely shy and sensitive to human disturbance. Active during low light hours (crepuscular).",
+    "images": [
+      "/wildlife/animals/Imperial_Heron.jpg",
+      "/wildlife/animals/Imperial_Heron1.jpg",
+      "/wildlife/animals/Imperial_Heron2.jpg",
+      "/wildlife/animals/Imperial_Heron3.jpg"
+    ]
+  },
+  {
+    "id": "sarus-crane",
+    "commonName": "Sarus Crane",
+    "scientificName": "Antigone antigone",
+    "category": "Bird",
+    "iucnStatus": "VU",
+    "family": "Gruidae",
+    "population": {
+      "2000": 850,
+      "2005": 800,
+      "2010": 750,
+      "2015": 700,
+      "2020": 650,
+      "2026": 600,
+      "trajectory": "-29.4%"
+    },
+    "location": "27.4800, 83.2760 | 27.5500, 83.0500",
+    "foodAndDiet": "Omnivore; aquatic plant roots, tubers, seeds, frogs, lizards, insects, and agricultural grains.",
+    "natureAndActivity": "Tallest flying bird in the world; famous for lifetime monogamous pairing and graceful courtship dances. Diurnal.",
+    "spatialDistribution": "Mated pairs or small family groups with young.",
+    "distribution": {
+      "provinces": [
+        "Lumbini Province"
+      ],
+      "districts": [
+        "Rupandehi",
+        "Nawalparasi West"
+      ]
+    },
+    "description": "Tallest flying bird in the world; famous for lifetime monogamous pairing and graceful courtship dances. Diurnal.",
+    "images": [
+      "/wildlife/animals/Sarus_Crane.jpg",
+      "/wildlife/animals/Sarus_Crane1.jpg",
+      "/wildlife/animals/Sarus_Crane2.jpg",
+      "/wildlife/animals/Sarus_Crane3.jpg"
+    ]
+  },
+  {
+    "id": "asian-giant-softshell-turtle",
+    "commonName": "Asian Giant Softshell Turtle",
+    "scientificName": "Pelochelys cantorii",
+    "category": "Reptile",
+    "iucnStatus": "CR",
+    "family": "Trionychidae",
+    "population": {
+      "2000": 150,
+      "2005": 120,
+      "2010": 90,
+      "2015": 60,
+      "2020": 40,
+      "2026": 25,
+      "trajectory": "-83.3%"
+    },
+    "location": "26.5500, 86.9167",
+    "foodAndDiet": "Carnivore/piscivore; ambush predator eating fish, crustaceans, mollusks, and aquatic invertebrates.",
+    "natureAndActivity": "Extremely secretive; spends 95% of life buried motionless under river sand with only eyes and snout exposed.",
+    "spatialDistribution": "Solitary.",
+    "distribution": {
+      "provinces": [
+        "Province No. 1"
+      ],
+      "districts": [
+        "Sunsari"
+      ]
+    },
+    "description": "Extremely secretive; spends 95% of life buried motionless under river sand with only eyes and snout exposed.",
+    "images": [
+      "/wildlife/animals/Asian_Giant_Softshell_Turtle.jpg",
+      "/wildlife/animals/Asian_Giant_Softshell_Turtle1.jpg",
+      "/wildlife/animals/Asian_Giant_Softshell_Turtle2.jpg",
+      "/wildlife/animals/Asian_Giant_Softshell_Turtle3.jpg"
+    ]
+  },
+  {
+    "id": "great-hornbill",
+    "commonName": "Great Hornbill",
+    "scientificName": "Buceros bicornis",
+    "category": "Bird",
+    "iucnStatus": "VU",
+    "family": "Bucerotidae",
+    "population": {
+      "2000": 350,
+      "2005": 300,
+      "2010": 240,
+      "2015": 190,
+      "2020": 150,
+      "2026": 120,
+      "trajectory": "-65.7%"
+    },
+    "location": "27.4500, 84.3500 | 27.3333, 84.8833",
+    "foodAndDiet": "Frugivore/Omnivore; predominantly wild figs, fruits, small mammals, reptiles, and nestling birds.",
+    "natureAndActivity": "Canopy-dwelling bird with a large casque; female seals herself inside hollow tree cavity nests during breeding. Diurnal.",
+    "spatialDistribution": "Mated pairs or small family units.",
+    "distribution": {
+      "provinces": [
+        "Bagmati Province"
+      ],
+      "districts": [
+        "Chitwan"
+      ]
+    },
+    "description": "Canopy-dwelling bird with a large casque; female seals herself inside hollow tree cavity nests during breeding. Diurnal.",
+    "images": [
+      "/wildlife/animals/Great_hornbill.jpg",
+      "/wildlife/animals/giant_pied_nornbill.jpg",
+      "/wildlife/animals/giant_pied_nornbill1.jpg",
+      "/wildlife/animals/giant_pied_nornbill2.jpg"
+    ]
+  },
+  {
+    "id": "blackbuck",
+    "commonName": "Blackbuck",
+    "scientificName": "Antilope cervicapra",
+    "category": "Mammal",
+    "iucnStatus": "NT",
+    "family": "Bovidae",
+    "population": {
+      "2000": 160,
+      "2005": 180,
+      "2010": 200,
+      "2015": 280,
+      "2020": 250,
+      "2026": 220,
+      "trajectory": "+37.5%"
+    },
+    "location": "28.2500, 81.3333",
+    "foodAndDiet": "Herbivore; grazer focused on short grasses, cereal crops, and herbs.",
+    "natureAndActivity": "Exceptionally fast runner; relies on sharp eyesight and speed to avoid predators. Active during daytime.",
+    "spatialDistribution": "Social; forms open mixed-sex or bachelor herds.",
+    "distribution": {
+      "provinces": [
+        "Lumbini Province"
+      ],
+      "districts": [
+        "Bardiya"
+      ]
+    },
+    "description": "Exceptionally fast runner; relies on sharp eyesight and speed to avoid predators. Active during daytime.",
+    "images": [
+      "/wildlife/animals/Blackbuck.jpg",
+      "/wildlife/animals/Blackbuck1.jpg",
+      "/wildlife/animals/Blackbuck2.jpg",
+      "/wildlife/animals/Blackbuck3.jpg"
+    ]
+  },
+  {
+    "id": "four-horned-antelope",
+    "commonName": "Four-horned Antelope",
+    "scientificName": "Tetracerus quadricornis",
+    "category": "Mammal",
+    "iucnStatus": "VU",
+    "family": "Bovidae",
+    "population": {
+      "2000": 550,
+      "2005": 500,
+      "2010": 450,
+      "2015": 400,
+      "2020": 360,
+      "2026": 330,
+      "trajectory": "-40.0%"
+    },
+    "location": "27.2833, 84.8167 | 27.4833, 84.6000",
+    "foodAndDiet": "Herbivore; browser that selects tender leaves, grasses, shoots, and fallen fruits.",
+    "natureAndActivity": "Small, extremely shy antelope; males possess four horns. Diurnal and secretive, staying near dense cover.",
+    "spatialDistribution": "Solitary or in pairs (rarely groups).",
+    "distribution": {
+      "provinces": [
+        "Bagmati Province"
+      ],
+      "districts": [
+        "Chitwan",
+        "Makwanpur"
+      ]
+    },
+    "description": "Small, extremely shy antelope; males possess four horns. Diurnal and secretive, staying near dense cover.",
+    "images": [
+      "/wildlife/animals/Four-horned_Antelope.jpg",
+      "/wildlife/animals/Four-horned_Antelope1.jpg",
+      "/wildlife/animals/Four-horned_Antelope2.jpg",
+      "/wildlife/animals/Four-horned_Antelope4.jpg"
+    ]
+  },
+  {
+    "id": "golden-mahseer",
+    "commonName": "Golden Mahseer",
+    "scientificName": "Tor putitora",
+    "category": "Fish",
+    "iucnStatus": "EN",
+    "family": "Cyprinidae",
+    "population": {
+      "2000": 5000,
+      "2005": 3500,
+      "2010": 2200,
+      "2015": 1200,
+      "2020": 700,
+      "2026": 400,
+      "trajectory": "-92.0%"
+    },
+    "location": "28.6333, 81.2833 | 28.9000, 81.1167",
+    "foodAndDiet": "Omnivore/piscivore; feeds on aquatic insects, larvae, small fish, algae, and fallen river fruits.",
+    "natureAndActivity": "Powerful migratory freshwater fish; famous for upward breeding migrations into rapid mountain streams in monsoon.",
+    "spatialDistribution": "Schools; swims in small to medium groups in fast-flowing river pools.",
+    "distribution": {
+      "provinces": [
+        "Lumbini Province",
+        "Karnali Province"
+      ],
+      "districts": [
+        "Bardiya",
+        "Surkhet"
+      ]
+    },
+    "description": "Powerful migratory freshwater fish; famous for upward breeding migrations into rapid mountain streams in monsoon.",
+    "images": [
+      "/wildlife/fishes/Golden_Mahseer.jpg",
+      "/wildlife/fishes/Golden_mahseer_(Tor_putitora)_Babai_River.jpg",
+      "/wildlife/fishes/Golden_Mahseer1.jpg",
+      "/wildlife/fishes/Golden_Mahseer4.jpg"
+    ]
+  },
+  {
+    "id": "himalayan-brown-bear",
+    "commonName": "Himalayan Brown Bear",
+    "scientificName": "Ursus arctos",
+    "category": "Mammal",
+    "iucnStatus": "CR",
+    "family": "Ursidae",
+    "population": {
+      "2000": 70,
+      "2005": 60,
+      "2010": 50,
+      "2015": 40,
+      "2020": 35,
+      "2026": 30,
+      "trajectory": "-57.1%"
+    },
+    "location": "28.6333, 81.2833 | 28.9000, 81.1167",
+    "foodAndDiet": "Omnivore; roots, bulbs, alpine berries, insects, marmots, small mammals, and livestock carcasses.",
+    "natureAndActivity": "Large, solitary land mammal; diurnal to crepuscular. Undergoes winter hibernation in mountain caves/burrows.",
+    "spatialDistribution": "Solitary; maintains large seasonal home ranges.",
+    "distribution": {
+      "provinces": [
+        "Karnali Province"
+      ],
+      "districts": [
+        "Humla",
+        "Dolpa"
+      ]
+    },
+    "description": "Large, solitary land mammal; diurnal to crepuscular. Undergoes winter hibernation in mountain caves/burrows.",
+    "images": [
+      "/wildlife/animals/Himalayan_Brown_Bear.jpg",
+      "/wildlife/animals/Himalayan_Brown_Bear1.jpg",
+      "/wildlife/animals/Himalayan_Brown_Bear2.jpg",
+      "/wildlife/animals/Himalayan_Brown_Bear3.jpg"
+    ]
+  },
+  {
+    "id": "himalayan-wolf",
+    "commonName": "Himalayan Wolf",
+    "scientificName": "Canis lupus chanco",
+    "category": "Mammal",
+    "iucnStatus": "VU",
+    "family": "Canidae",
+    "population": {
+      "2000": 380,
+      "2005": 350,
+      "2010": 320,
+      "2015": 300,
+      "2020": 280,
+      "2026": 270,
+      "trajectory": "-28.9%"
+    },
+    "location": "28.5500, 84.6333 | 29.2000, 82.8000",
+    "foodAndDiet": "Carnivore; preys on wild alpine ungulates (blue sheep, marmots, hares) and livestock (yaks, sheep).",
+    "natureAndActivity": "High-altitude social apex predator; active during dawn, dusk, and night. Highly vocal (howling) for pack communication.",
+    "spatialDistribution": "Social; lives in territorial family packs of 3–8 individuals.",
+    "distribution": {
+      "provinces": [
+        "Gandaki Province",
+        "Karnali Province"
+      ],
+      "districts": [
+        "Manang",
+        "Dolpa"
+      ]
+    },
+    "description": "High-altitude social apex predator; active during dawn, dusk, and night. Highly vocal (howling) for pack communication.",
+    "images": [
+      "/wildlife/animals/Himalayan_Wolf.jpg",
+      "/wildlife/animals/Himalayan_Wolf1.jpg",
+      "/wildlife/animals/Himalayan_Wolf2.jpg",
+      "/wildlife/animals/Himalayan_Wolf3.jpg"
+    ]
+  },
+  {
+    "id": "tibetan-antelope-chiru",
+    "commonName": "Tibetan Antelope (Chiru)",
+    "scientificName": "Pantholops hodgsonii",
+    "category": "Mammal",
+    "iucnStatus": "NT",
+    "family": "Bovidae",
+    "population": {
+      "2000": 15,
+      "2005": 20,
+      "2010": 35,
+      "2015": 50,
+      "2020": 70,
+      "2026": 80,
+      "trajectory": "+433%"
+    },
+    "location": "29.5000, 82.9500 | 27.8000, 88.0500",
+    "foodAndDiet": "Herbivore; feeds on alpine herbs, grasses, and low-growing shrubs.",
+    "natureAndActivity": "High-altitude, fast-running ungulate; highly nomadic, performing long seasonal migrations. Diurnal.",
+    "spatialDistribution": "Social; travels in sex-segregated herds that merge during migration.",
+    "distribution": {
+      "provinces": [
+        "Karnali Province"
+      ],
+      "districts": [
+        "Humla"
+      ]
+    },
+    "description": "High-altitude, fast-running ungulate; highly nomadic, performing long seasonal migrations. Diurnal.",
+    "images": [
+      "/wildlife/animals/Tibetan_Antelope_Chiru.jpg",
+      "/wildlife/animals/Tibetan_Antelope_Chiru1.jpg",
+      "/wildlife/animals/Tibetan_Antelope_Chiru2.jpg",
+      "/wildlife/animals/Tibetan_Antelope_Chiru3.jpg"
+    ]
+  },
+  {
+    "id": "wild-yak",
+    "commonName": "Wild Yak",
+    "scientificName": "Bos mutus",
+    "category": "Mammal",
+    "iucnStatus": "VU",
+    "family": "Bovidae",
+    "population": {
+      "2000": 10,
+      "2005": 20,
+      "2010": 40,
+      "2015": 70,
+      "2020": 100,
+      "2026": 120,
+      "trajectory": "+1100%"
+    },
+    "location": "29.3000, 83.9000",
+    "foodAndDiet": "Herbivore; grazes on low alpine grasses, sedges, mosses, and lichens.",
+    "natureAndActivity": "Cold-adapted, heavy-bodied ungulate active during the day in extreme high-altitude alpine tundras.",
+    "spatialDistribution": "Social; females/calves form large herds, while adult bulls form small bachelor groups or remain solitary.",
+    "distribution": {
+      "provinces": [
+        "Karnali Province"
+      ],
+      "districts": [
+        "Humla",
+        "Dolpa"
+      ]
+    },
+    "description": "Cold-adapted, heavy-bodied ungulate active during the day in extreme high-altitude alpine tundras.",
+    "images": [
+      "/wildlife/animals/wild_yak.jpg",
+      "/wildlife/animals/wild_yak1.jpg",
+      "/wildlife/animals/wild_yak2.jpg",
+      "/wildlife/animals/Wild-Yak1.jpg"
+    ]
+  },
+  {
+    "id": "fishing-cat",
+    "commonName": "Fishing Cat",
+    "scientificName": "Prionailurus viverrinus",
+    "category": "Mammal",
+    "iucnStatus": "VU",
+    "family": "Felidae",
+    "population": {
+      "2000": 400,
+      "2005": 350,
+      "2010": 300,
+      "2015": 260,
+      "2020": 230,
+      "2026": 210,
+      "trajectory": "-47.5%"
+    },
+    "location": "29.1833, 80.9500 | 30.0167, 81.6500",
+    "foodAndDiet": "Carnivore; specialized hunter feeding on fish, freshwater crabs, frogs, small rodents, and waterfowl.",
+    "natureAndActivity": "Excellent swimmer; hunts along reed-lined water edges. Primarily nocturnal and crepuscular.",
+    "spatialDistribution": "Solitary; maintains territories along wetland and river systems.",
+    "distribution": {
+      "provinces": [
+        "Sudurpashchim Province"
+      ],
+      "districts": [
+        "Kailali",
+        "Kanchanpur"
+      ]
+    },
+    "description": "Excellent swimmer; hunts along reed-lined water edges. Primarily nocturnal and crepuscular.",
+    "images": [
+      "/wildlife/animals/Fishing_Cat.jpg",
+      "/wildlife/animals/Fishing_Cat1.jpg",
+      "/wildlife/animals/Fishing_Cat2.jpg",
+      "/wildlife/animals/Fishing_Cat3.jpg"
+    ]
+  },
+  {
+    "id": "hispid-hare",
+    "commonName": "Hispid Hare",
+    "scientificName": "Caprolagus hispidus",
+    "category": "Mammal",
+    "iucnStatus": "EN",
+    "family": "Leporidae",
+    "population": {
+      "2000": 600,
+      "2005": 500,
+      "2010": 400,
+      "2015": 350,
+      "2020": 280,
+      "2026": 220,
+      "trajectory": "-63.3%"
+    },
+    "location": "27.6167, 83.1000 | 26.6000, 86.9500",
+    "foodAndDiet": "Herbivore; feeds on grass roots, tender shoots, thatch grass, and bark.",
+    "natureAndActivity": "Shy, slow-moving, nocturnal small mammal. Relies on dense, tall thatch grass for camouflage rather than speed.",
+    "spatialDistribution": "Solitary or paired.",
+    "distribution": {
+      "provinces": [
+        "Lumbini Province",
+        "Koshi Province"
+      ],
+      "districts": [
+        "Rupandehi",
+        "Sunsari"
+      ]
+    },
+    "description": "Shy, slow-moving, nocturnal small mammal. Relies on dense, tall thatch grass for camouflage rather than speed.",
+    "images": [
+      "/wildlife/animals/Hispid_Hare.jpg",
+      "/wildlife/animals/Hispid_Hare1.jpg",
+      "/wildlife/animals/Hispid_Hare2.jpg",
+      "/wildlife/animals/Hispid_Hare4.jpg"
+    ]
+  },
+  {
+    "id": "red-headed-vulture",
+    "commonName": "Red-headed Vulture",
+    "scientificName": "Sarcogyps calvus",
+    "category": "Bird",
+    "iucnStatus": "CR",
+    "family": "Accipitridae",
+    "population": {
+      "2000": 1100,
+      "2005": 800,
+      "2010": 500,
+      "2015": 350,
+      "2020": 280,
+      "2026": 250,
+      "trajectory": "-77.3%"
+    },
+    "location": "28.8667, 80.1500 | 28.4000, 81.3000",
+    "foodAndDiet": "Obligate scavenger; dominant at carcasses, often ripping open tough hides for smaller scavengers.",
+    "natureAndActivity": "High-altitude soaring scavenger; diurnal and territorial around nesting trees.",
+    "spatialDistribution": "Solitary or found in pairs; far less gregarious than Gyps vultures.",
+    "distribution": {
+      "provinces": [
+        "Sudurpashchim Province",
+        "Lumbini Province"
+      ],
+      "districts": [
+        "Kanchanpur",
+        "Bardiya"
+      ]
+    },
+    "description": "High-altitude soaring scavenger; diurnal and territorial around nesting trees.",
+    "images": [
+      "/wildlife/animals/red_headed_vulture.jpg",
+      "/wildlife/animals/Red-headedvulture1.jpg",
+      "/wildlife/animals/Red-headedvulture2.jpg",
+      "/wildlife/animals/Red-headedvulture3.jpg"
+    ]
+  },
+  {
+    "id": "slender-billed-vulture",
+    "commonName": "Slender-billed Vulture",
+    "scientificName": "Gyps tenuirostris",
+    "category": "Bird",
+    "iucnStatus": "CR",
+    "family": "Accipitridae",
+    "population": {
+      "2000": 40,
+      "2005": 50,
+      "2010": 70,
+      "2015": 90,
+      "2020": 110,
+      "2026": 130,
+      "trajectory": "+225.0%"
+    },
+    "location": "28.2333, 83.9833 | 27.9167, 84.2500",
+    "foodAndDiet": "Obligate scavenger; feeds on animal carcasses, specializing in softer tissues due to slender neck and bill.",
+    "natureAndActivity": "Diurnal scavenger; spends hours soaring high in search of food. Highly sensitive to habitat alteration.",
+    "spatialDistribution": "Group-dwelling/semi-social; often feeds alongside other vulture species at communal carcasses.",
+    "distribution": {
+      "provinces": [
+        "Gandaki Province",
+        "Bagmati Province"
+      ],
+      "districts": [
+        "Kaski",
+        "Chitwan"
+      ]
+    },
+    "description": "Diurnal scavenger; spends hours soaring high in search of food. Highly sensitive to habitat alteration.",
+    "images": [
+      "/wildlife/animals/Slender-billed-vulture.jpg",
+      "/wildlife/animals/Slender-billed-vultur2e.jpg",
+      "/wildlife/animals/Slender-billed-vulture1.jpg"
+    ]
+  },
+  {
+    "id": "white-rumped-vulture",
+    "commonName": "White-rumped Vulture",
+    "scientificName": "Gyps bengalensis",
+    "category": "Bird",
+    "iucnStatus": "CR",
+    "family": "Accipitridae",
+    "population": {
+      "2000": 1600,
+      "2005": 200,
+      "2010": 500,
+      "2015": 1000,
+      "2020": 1500,
+      "2026": 1800,
+      "trajectory": "+12.5%"
+    },
+    "location": "28.8333, 80.2500 | 28.7000, 80.6000",
+    "foodAndDiet": "Obligate scavenger; feeds exclusively on the carcasses of dead ungulates and livestock.",
+    "natureAndActivity": "Soaring bird active during warm daytime hours using thermal updrafts. Social roosting and feeding behavior.",
+    "spatialDistribution": "Highly social; nests and feeds in communal groups.",
+    "distribution": {
+      "provinces": [
+        "Sudurpashchim Province"
+      ],
+      "districts": [
+        "Kanchanpur",
+        "Kailali"
+      ]
+    },
+    "description": "Soaring bird active during warm daytime hours using thermal updrafts. Social roosting and feeding behavior.",
+    "images": [
+      "/wildlife/animals/vulture.jpg",
+      "/wildlife/animals/vulture1.jpg",
+      "/wildlife/animals/vulture2.jpg",
+      "/wildlife/animals/vulture4.jpg"
+    ]
+  },
+  {
+    "id": "bengal-florican",
+    "commonName": "Bengal Florican",
+    "scientificName": "Houbaropsis bengalensis",
+    "category": "Bird",
+    "iucnStatus": "CR",
+    "family": "Otididae",
+    "population": {
+      "2000": 120,
+      "2005": 100,
+      "2010": 80,
+      "2015": 65,
+      "2020": 55,
+      "2026": 50,
+      "trajectory": "-58.3%"
+    },
+    "location": "28.3667, 81.2833 | 27.5667, 84.5333",
+    "foodAndDiet": "Omnivore; eats grass seeds, shoot tips, berries, grasshoppers, beetles, and small lizards.",
+    "natureAndActivity": "Terrestrial ground-dwelling bird; famous for male's elaborate aerial leaping display during spring breeding. Diurnal.",
+    "spatialDistribution": "Solitary or widely spaced pairs during breeding; scattered individuals across open grasslands.",
+    "distribution": {
+      "provinces": [
+        "Lumbini Province",
+        "Bagmati Province"
+      ],
+      "districts": [
+        "Bardiya",
+        "Chitwan"
+      ]
+    },
+    "description": "Terrestrial ground-dwelling bird; famous for male's elaborate aerial leaping display during spring breeding. Diurnal.",
+    "images": [
+      "/wildlife/animals/Bengal_Florican.jpg",
+      "/wildlife/animals/Bengal_Florican1.jpg",
+      "/wildlife/animals/Bengal Florican.jpg",
+      "/wildlife/animals/Bengal_Florican4.jpg"
+    ]
+  },
+  {
+    "id": "gaur-wild-bison",
+    "commonName": "Gaur (Wild Bison)",
+    "scientificName": "Bos gaurus",
+    "category": "Mammal",
+    "iucnStatus": "VU",
+    "family": "Bovidae",
+    "population": {
+      "2000": 270,
+      "2005": 300,
+      "2010": 330,
+      "2015": 370,
+      "2020": 420,
+      "2026": 470,
+      "trajectory": "+74.1%"
+    },
+    "location": "27.1667, 84.9500 | 27.5000, 84.5000",
+    "foodAndDiet": "Herbivore; feeds on coarse grasses, bamboo shoots, tree leaves, bark, and young fruits.",
+    "natureAndActivity": "Largest wild bovine; active during daytime in undisturbed areas, nocturnal near human settlements. Gentle unless cornered.",
+    "spatialDistribution": "Social; forms mixed herds of 8–20 individuals led by an experienced adult female.",
+    "distribution": {
+      "provinces": [
+        "Bagmati Province"
+      ],
+      "districts": [
+        "Chitwan",
+        "Makwanpur"
+      ]
+    },
+    "description": "Largest wild bovine; active during daytime in undisturbed areas, nocturnal near human settlements. Gentle unless cornered.",
+    "images": [
+      "/wildlife/animals/gaur.jpg",
+      "/wildlife/animals/gaur1.jpg",
+      "/wildlife/animals/gaur2.jpg",
+      "/wildlife/animals/gaur3.jpg"
+    ]
+  },
+  {
+    "id": "swamp-deer-barasingha",
+    "commonName": "Swamp Deer (Barasingha)",
+    "scientificName": "Rucervus duvaucelii",
+    "category": "Mammal",
+    "iucnStatus": "VU",
+    "family": "Cervidae",
+    "population": {
+      "2000": 1800,
+      "2005": 1500,
+      "2010": 1750,
+      "2015": 2100,
+      "2020": 2250,
+      "2026": 2350,
+      "trajectory": "+30.6%"
+    },
+    "location": "28.8500, 80.1833",
+    "foodAndDiet": "Herbivore; specializes in grazing marshland grasses, aquatic flora, and reed leaves.",
+    "natureAndActivity": "Highly gregarious, diurnal, and crepuscular grazers that rely heavily on wetland habitats.",
+    "spatialDistribution": "Social; gathers in large herds ranging from dozens to hundreds of individuals.",
+    "distribution": {
+      "provinces": [
+        "Sudurpashchim Province"
+      ],
+      "districts": [
+        "Kanchanpur"
+      ]
+    },
+    "description": "Highly gregarious, diurnal, and crepuscular grazers that rely heavily on wetland habitats.",
+    "images": [
+      "/wildlife/animals/Swamp-deer.jpg",
+      "/wildlife/animals/Swamp-deer2.jpg",
+      "/wildlife/animals/Swamp-deer3.jpg",
+      "/wildlife/animals/Swamp-deer4.jpg"
+    ]
+  },
+  {
+    "id": "clouded-leopard",
+    "commonName": "Clouded Leopard",
+    "scientificName": "Neofelis nebulosa",
+    "category": "Mammal",
+    "iucnStatus": "VU",
+    "family": "Felidae",
+    "population": {
+      "2000": 230,
+      "2005": 200,
+      "2010": 170,
+      "2015": 140,
+      "2020": 120,
+      "2026": 110,
+      "trajectory": "-52.2%"
+    },
+    "location": "27.8000, 85.3833 | 28.3833, 83.8167",
+    "foodAndDiet": "Carnivore; hunts arboreal and terrestrial prey including primates, small deer, porcupines, wild pigs, and birds.",
+    "natureAndActivity": "Extremely agile, arboreal predator capable of descending trunks head-first. Nocturnal and crepuscular.",
+    "spatialDistribution": "Solitary; keeps large, overlapping forest home ranges.",
+    "distribution": {
+      "provinces": [
+        "Bagmati Province",
+        "Gandaki Province"
+      ],
+      "districts": [
+        "Makwanpur",
+        "Kaski"
+      ]
+    },
+    "description": "Extremely agile, arboreal predator capable of descending trunks head-first. Nocturnal and crepuscular.",
+    "images": [
+      "/wildlife/animals/clouded_leopard.jpg",
+      "/wildlife/animals/clouded_leopard1.jpg",
+      "/wildlife/animals/clouded_leopard2.jpg",
+      "/wildlife/animals/clouded_leopard4.jpg"
+    ]
+  },
+  {
+    "id": "wild-water-buffalo-arna",
+    "commonName": "Wild Water Buffalo (Arna)",
+    "scientificName": "Bubalus arnee",
+    "category": "Mammal",
+    "iucnStatus": "EN",
+    "family": "Bovidae",
+    "population": {
+      "2000": 150,
+      "2005": 160,
+      "2010": 220,
+      "2015": 330,
+      "2020": 440,
+      "2026": 498,
+      "trajectory": "+232.0%"
+    },
+    "location": "26.6167, 86.9833",
+    "foodAndDiet": "Herbivore; grazes on riverine grasses, sedges, reeds, and aquatic plants.",
+    "natureAndActivity": "Highly water-dependent; wallows in mud/rivers during hot hours. Active mainly in early morning and late afternoon.",
+    "spatialDistribution": "Social; forms cohesive herds led by dominant females. Older males form bachelor herds or remain solitary.",
+    "distribution": {
+      "provinces": [
+        "Province No. 1"
+      ],
+      "districts": [
+        "Sunsari"
+      ]
+    },
+    "description": "Highly water-dependent; wallows in mud/rivers during hot hours. Active mainly in early morning and late afternoon.",
+    "images": [
+      "/wildlife/animals/Wild_Water_Buffalo_Arna.jpg",
+      "/wildlife/animals/Wild_Water_Buffalo_Arna1.jpg",
+      "/wildlife/animals/Wild_Water_Buffalo_Arna2.jpg",
+      "/wildlife/animals/Wild_Water_Buffalo_Arna4.jpg"
+    ]
+  },
+  {
+    "id": "himalayan-musk-deer",
+    "commonName": "Himalayan Musk Deer",
+    "scientificName": "Moschus leucogaster",
+    "category": "Mammal",
+    "iucnStatus": "EN",
+    "family": "Moschidae",
+    "population": {
+      "2000": 5000,
+      "2005": 4500,
+      "2010": 3800,
+      "2015": 3200,
+      "2020": 2800,
+      "2026": 2400,
+      "trajectory": "-52.0%"
+    },
+    "location": "27.8000, 86.7167 | 28.5333, 83.0500",
+    "foodAndDiet": "Herbivore; feeds on lichens, mosses, tree leaves, alpine shoots, and bark.",
+    "natureAndActivity": "Shy, solitary, nocturnal/crepuscular. Lacks antlers; males possess enlarged upper canine tusks for defense.",
+    "spatialDistribution": "Solitary; marks territorial boundaries with musk gland secretions.",
+    "distribution": {
+      "provinces": [
+        "Koshi Province",
+        "Gandaki Province"
+      ],
+      "districts": [
+        "Solukhumbu",
+        "Mustang"
+      ]
+    },
+    "description": "Shy, solitary, nocturnal/crepuscular. Lacks antlers; males possess enlarged upper canine tusks for defense.",
+    "images": [
+      "/wildlife/animals/himalayan-musk-deer.jpg",
+      "/wildlife/animals/himalayan-musk-deer1.jpg",
+      "/wildlife/animals/himalayan-musk-deer3.jpg",
+      "/wildlife/animals/himalayan-musk-deer6.jpg"
+    ]
+  },
+  {
+    "id": "indian-pangolin",
+    "commonName": "Indian Pangolin",
+    "scientificName": "Manis crassicaudata",
+    "category": "Mammal",
+    "iucnStatus": "EN",
+    "family": "Manidae",
+    "population": {
+      "2000": 2500,
+      "2005": 2000,
+      "2010": 1600,
+      "2015": 1200,
+      "2020": 900,
+      "2026": 750,
+      "trajectory": "-70.0%"
+    },
+    "location": "27.3000, 84.7000 | 28.8833, 80.2833",
+    "foodAndDiet": "Insectivore; specializes in subterranean ant and termite species.",
+    "natureAndActivity": "Strictly nocturnal, terrestrial, and an adept digger using powerful front claws. Reclusive and easily disturbed.",
+    "spatialDistribution": "Solitary; occupies distinct individual home ranges.",
+    "distribution": {
+      "provinces": [
+        "Bagmati Province",
+        "Sudurpashchim Province"
+      ],
+      "districts": [
+        "Chitwan",
+        "Kanchanpur"
+      ]
+    },
+    "description": "Strictly nocturnal, terrestrial, and an adept digger using powerful front claws. Reclusive and easily disturbed.",
+    "images": [
+      "/wildlife/animals/Indian-pangolin.jpg",
+      "/wildlife/animals/Indian-pangolin1.jpg",
+      "/wildlife/animals/Indian-pangolin3.jpg",
+      "/wildlife/animals/Indian-pangolin5.jpg"
+    ]
+  },
+  {
+    "id": "chinese-pangolin",
+    "commonName": "Chinese Pangolin",
+    "scientificName": "Manis pentadactyla",
+    "category": "Mammal",
+    "iucnStatus": "CR",
+    "family": "Manidae",
+    "population": {
+      "2000": 4000,
+      "2005": 3000,
+      "2010": 2200,
+      "2015": 1500,
+      "2020": 1100,
+      "2026": 900,
+      "trajectory": "-77.5%"
+    },
+    "location": "27.6222, 85.5539 | 27.4167, 85.0333",
+    "foodAndDiet": "Insectivore; highly specialized diet strictly consisting of ants, termites, and larvae extracted using a sticky tongue.",
+    "natureAndActivity": "Secretive, slow-moving, nocturnal burrow-dweller. Rolls into a tight armor-plated ball when threatened.",
+    "spatialDistribution": "Solitary; lives individually in deep underground burrows.",
+    "distribution": {
+      "provinces": [
+        "Bagmati Province"
+      ],
+      "districts": [
+        "Kavrepalanchok",
+        "Kathmandu"
+      ]
+    },
+    "description": "Secretive, slow-moving, nocturnal burrow-dweller. Rolls into a tight armor-plated ball when threatened.",
+    "images": [
+      "/wildlife/animals/chinese-pangolian.jpg",
+      "/wildlife/animals/chinese-pangolian2.jpg",
+      "/wildlife/animals/chinese-pangolian3.jpg",
+      "/wildlife/animals/chinese-pangolian4.jpg"
+    ]
+  },
+  {
+    "id": "gharial",
+    "commonName": "Gharial",
+    "scientificName": "Gavialis gangeticus",
+    "category": "Reptile",
+    "iucnStatus": "CR",
+    "family": "Gavialidae",
+    "population": {
+      "2000": 80,
+      "2005": 60,
+      "2010": 102,
+      "2015": 166,
+      "2020": 230,
+      "2026": 265,
+      "trajectory": "+231.3%"
+    },
+    "location": "27.5503, 84.3294 | 27.5411, 84.1017",
+    "foodAndDiet": "Specialized piscivore; uses thin elongated snout with sharp teeth to capture fish, frogs, and aquatic organisms.",
+    "natureAndActivity": "Ectothermic; spends hours basking on sandbanks during winter. Highly adapted to aquatic life, awkward on land.",
+    "spatialDistribution": "Group gatherings on communal sandbanks during basking/nesting; otherwise disperse along rivers.",
+    "distribution": {
+      "provinces": [
+        "Bagmati Province"
+      ],
+      "districts": [
+        "Chitwan",
+        "Nawalparasi East"
+      ]
+    },
+    "description": "Ectothermic; spends hours basking on sandbanks during winter. Highly adapted to aquatic life, awkward on land.",
+    "images": [
+      "/wildlife/animals/gharial.jpg",
+      "/wildlife/animals/gharial2.jpg",
+      "/wildlife/animals/gharial3.jpg",
+      "/wildlife/animals/gharials.jpg"
+    ]
+  },
+  {
+    "id": "ganges-river-dolphin",
+    "commonName": "Ganges River Dolphin",
+    "scientificName": "Platanista gangetica",
+    "category": "Mammal",
+    "iucnStatus": "EN",
+    "family": "Platanistidae",
+    "population": {
+      "2000": 20,
+      "2005": 20,
+      "2010": 28,
+      "2015": 35,
+      "2020": 42,
+      "2026": 48,
+      "trajectory": "+140.0%"
+    },
+    "location": "28.6417, 81.2889 | 26.5200, 86.9300",
+    "foodAndDiet": "Carnivore/piscivore; uses echolocation to hunt freshwater fish, catfish, carp, and crustaceans in murky waters.",
+    "natureAndActivity": "Functional blind mammal active day and night; continuously surfaces every 30–120 seconds to breathe.",
+    "spatialDistribution": "Solitary or found in small loose groups (2–5 individuals) in deep river pools.",
+    "distribution": {
+      "provinces": [
+        "Karnali Province",
+        "Province No. 1"
+      ],
+      "districts": [
+        "Kailali",
+        "Sunsari"
+      ]
+    },
+    "description": "Functional blind mammal active day and night; continuously surfaces every 30–120 seconds to breathe. OOnly one of the freshwater dolphins that is found in the planet, which is found mostly in Indian river and some in Koshi river of Nepal.",
+    "images": [
+      "/wildlife/fishes/dolphin.jpg",
+      "/wildlife/fishes/dolphin2.jpg",
+      "/wildlife/fishes/dolphin3.jpg",
+      "/wildlife/fishes/dolphins.jpg"
+    ]
+  },
+  {
+    "id": "asian-elephant",
+    "commonName": "Asian Elephant",
+    "scientificName": "Elephas maximus",
+    "category": "Mammal",
+    "iucnStatus": "EN",
+    "family": "Elephantidae",
+    "population": {
+      "2000": 80,
+      "2005": 100,
+      "2010": 130,
+      "2015": 170,
+      "2020": 200,
+      "2026": 227,
+      "trajectory": "+183.8%"
+    },
+    "location": "26.6500, 86.9667 | 27.3500, 84.8667 | 26.6333, 88.0833",
+    "foodAndDiet": "Herbivore; consumes massive quantities of grasses, tree bark, leaves, roots, bamboo shoots, sugarcane, and rice crops.",
+    "natureAndActivity": "Highly intelligent and social; crepuscular/nocturnal foraging. Migratory by nature using established corridors.",
+    "spatialDistribution": "Matriarchal herds (females/offspring); adult bulls solitary or in small bachelor groups.",
+    "distribution": {
+      "provinces": [
+        "Province No. 1",
+        "Bagmati Province"
+      ],
+      "districts": [
+        "Jhapa",
+        "Chitwan"
+      ]
+    },
+    "description": "Highly intelligent and social; crepuscular/nocturnal foraging. Migratory by nature using established corridors.",
+    "images": [
+      "/wildlife/animals/elephant.jpg",
+      "/wildlife/animals/elephant2.jpg",
+      "/wildlife/animals/asian_elephant2.jpg",
+      "/wildlife/animals/asian_elephants.jpg"
+    ]
+  },
+  {
+    "id": "red-panda",
+    "commonName": "Red Panda",
+    "scientificName": "Ailurus fulgens",
+    "category": "Mammal",
+    "iucnStatus": "EN",
+    "family": "Ailuridae",
+    "population": {
+      "2000": 1200,
+      "2005": 1000,
+      "2010": 900,
+      "2015": 800,
+      "2020": 600,
+      "2026": 550,
+      "trajectory": "-54.2%"
+    },
+    "location": "28.0675, 85.4229 | 27.7617, 87.1511 | 28.6000, 83.0833",
+    "foodAndDiet": "Specialized herbivore/omnivore; bamboo leaves/shoots (80–90%), berries, acorns, roots, and bird eggs.",
+    "natureAndActivity": "Arboreal and crepuscular/nocturnal; spends daylight sleeping in tree hollows or high branches. Gentle and slow-moving.",
+    "spatialDistribution": "Solitary; comes together only during brief winter breeding season.",
+    "distribution": {
+      "provinces": [
+        "Bagmati Province",
+        "Koshi Province",
+        "Gandaki Province"
+      ],
+      "districts": [
+        "Rasuwa",
+        "Taplejung",
+        "Mustang"
+      ]
+    },
+    "description": "Arboreal and crepuscular/nocturnal; spends daylight sleeping in tree hollows or high branches. Gentle and slow-moving.",
+    "images": [
+      "/wildlife/animals/redpanda.jpg",
+      "/wildlife/animals/redpanda1.jpg",
+      "/wildlife/animals/Red-Panda-Trek-in-Nepal.jpg"
+    ]
+  },
+  {
+    "id": "snow-leopard",
+    "commonName": "Snow Leopard",
+    "scientificName": "Panthera uncia",
+    "category": "Mammal",
+    "iucnStatus": "VU",
+    "family": "Felidae",
+    "population": {
+      "2000": 300,
+      "2005": 300,
+      "2010": 320,
+      "2015": 350,
+      "2020": 380,
+      "2026": 397,
+      "trajectory": "+32.3%"
+    },
+    "location": "29.3517, 82.9089 | 28.6667, 84.0167 | 27.7000, 88.1000",
+    "foodAndDiet": "Carnivore; primary prey consists of blue sheep, Himalayan tahr, marmots, pikas, game birds, and livestock.",
+    "natureAndActivity": "Cryptic, silent, and highly solitary. Active during twilight hours traversing rugged mountain ridges and steep cliffs.",
+    "spatialDistribution": "Solitary; occupies expansive home ranges in harsh alpine terrain.",
+    "distribution": {
+      "provinces": [
+        "Karnali Province",
+        "Gandaki Province",
+        "Koshi Province"
+      ],
+      "districts": [
+        "Dolpa",
+        "Manang",
+        "Solukhumbu"
+      ]
+    },
+    "description": "Cryptic, silent, and highly solitary. Active during twilight hours traversing rugged mountain ridges and steep cliffs.",
+    "images": [
+      "/wildlife/animals/snow_leopard.jpg",
+      "/wildlife/animals/snow_leopard1.jpg",
+      "/wildlife/animals/snowleopard (2).jpg",
+      "/wildlife/animals/Snow-Leopard-Female.jpg",
+      "/wildlife/animals/snowleopard.jpg"
+    ]
+  },
+  {
+    "id": "dhole-asiatic-wild-dog",
+    "commonName": "Dhole (Asiatic Wild Dog)",
+    "scientificName": "Cuon alpinus",
+    "category": "Mammal",
+    "iucnStatus": "EN",
+    "family": "Canidae",
+    "population": {
+      "2000": 700,
+      "2005": 600,
+      "2010": 500,
+      "2015": 420,
+      "2020": 350,
+      "2026": 300,
+      "trajectory": "-57.1%"
+    },
+    "location": "28.5833, 83.0500 | 27.6500, 87.9500",
+    "foodAndDiet": "Carnivore; pack hunter taking down medium-to-large prey like sambar, chital, barking deer, and livestock.",
+    "natureAndActivity": "Highly social pack predator known for whistling vocalizations; hunts cooperatively during daylight hours.",
+    "spatialDistribution": "Social; lives in tight-knit packs ranging from 4 to 15 individuals.",
+    "distribution": {
+      "provinces": [
+        "Gandaki Province",
+        "Koshi Province"
+      ],
+      "districts": [
+        "Mustang",
+        "Taplejung"
+      ]
+    },
+    "description": "Highly social pack predator known for whistling vocalizations; hunts cooperatively during daylight hours.",
+    "images": [
+      "/wildlife/animals/dhole.jpg",
+      "/wildlife/animals/Dhole1.jpg",
+      "/wildlife/animals/dhole2.jpg",
+      "/wildlife/animals/dhole3.jpg"
+    ]
+  },
+  {
+    "id": "greater-one-horned-rhino",
+    "commonName": "Greater One-horned Rhino",
+    "scientificName": "Rhinoceros unicornis",
+    "category": "Mammal",
+    "iucnStatus": "VU",
+    "family": "Rhinocerotidae",
+    "population": {
+      "2000": 612,
+      "2005": 372,
+      "2010": 435,
+      "2015": 645,
+      "2020": 705,
+      "2026": 752,
+      "trajectory": "+22.9%"
+    },
+    "location": "27.5811, 84.4961 | 28.4500, 81.4833 | 28.8436, 80.2281",
+    "foodAndDiet": "Herbivore; feeds on tall alluvial grasses, sedges, fruits, aquatic plants, tree foliage, and agricultural crops.",
+    "natureAndActivity": "Generally solitary, non-aggressive loose aggregations around wallowing pools. Active in early mornings, late afternoons, and night.",
+    "spatialDistribution": "Solitary; occupies overlapping home ranges without strict territorial defense.",
+    "distribution": {
+      "provinces": [
+        "Bagmati Province",
+        "Lumbini Province",
+        "Sudurpashchim Province"
+      ],
+      "districts": [
+        "Chitwan",
+        "Bardiya",
+        "Kanchanpur"
+      ]
+    },
+    "description": "Generally solitary, non-aggressive loose aggregations around wallowing pools. Active in early mornings, late afternoons, and night.",
+    "images": [
+      "/wildlife/animals/indian_rhinoceros1.jpg",
+      "/wildlife/animals/indian_rhinoceros-1.jpg"
+    ]
+  },
+  {
+    "id": "bengal-tiger",
+    "commonName": "Bengal Tiger",
+    "scientificName": "Panthera tigris tigris",
+    "category": "Mammal",
+    "iucnStatus": "EN",
+    "family": "Felidae",
+    "population": {
+      "2000": 109,
+      "2005": 121,
+      "2010": 121,
+      "2015": 198,
+      "2020": 235,
+      "2026": 355,
+      "trajectory": "+225.7%"
+    },
+    "location": "27.5341, 84.4525 | 28.3846, 81.3650 | 28.1833, 81.9000",
+    "foodAndDiet": "Strict carnivore; predominantly hunts ungulates such as chital, sambar deer, hog deer, wild boar, and occasionally gaur or domestic livestock.",
+    "natureAndActivity": "Solitary and territorial apex predator; predominantly nocturnal and crepuscular. Highly secretive, territorial, and an excellent swimmer.",
+    "spatialDistribution": "Solitary; maintains distinct territories overlapping only between breeding males and females.",
+    "distribution": {
+      "provinces": [
+        "Bagmati Province",
+        "Lumbini Province"
+      ],
+      "districts": [
+        "Chitwan",
+        "Bardiya",
+        "Nawalparasi East"
+      ]
+    },
+    "description": "Solitary and territorial apex predator; predominantly nocturnal and crepuscular. Highly secretive, territorial, and an excellent swimmer.",
+    "images": [
+      "/wildlife/animals/bengal_tiger.jpg",
+      "/wildlife/animals/bengal_tiger1.jpg",
+      "/wildlife/animals/Bengal_Tiger2.jpg",
+      "/wildlife/animals/bengal_tiger4.jpg"
+    ]
+  },
+  {
+    "id": "smooth-coated-otter",
+    "commonName": "Smooth-coated Otter",
+    "scientificName": "Lutrogale perspicillata",
+    "category": "Mammal",
+    "iucnStatus": "VU",
+    "family": "Mustelidae",
+    "population": {
+      "2000": 500,
+      "2005": 400,
+      "2010": 320,
+      "2015": 250,
+      "2020": 190,
+      "2026": 150,
+      "trajectory": "-70.0%"
+    },
+    "location": "28.4167, 81.4167 | 28.5833, 81.2500",
+    "foodAndDiet": "Carnivore; eats fish, frogs, water snakes, crabs, and aquatic insects.",
+    "natureAndActivity": "Playful, semi-aquatic mammal; excellent swimmer active during early morning and late afternoon.",
+    "spatialDistribution": "Social family groups (5–10 individuals) that hunt and groom together.",
+    "distribution": {
+      "provinces": [
+        "Lumbini Province"
+      ],
+      "districts": [
+        "Bardiya"
+      ]
+    },
+    "description": "Playful, semi-aquatic mammal; excellent swimmer active during early morning and late afternoon.",
+    "images": []
+  },
+  {
+    "id": "himalayan-musk-shrew",
+    "commonName": "Himalayan Musk Shrew",
+    "scientificName": "Suncus stoliczkanus",
+    "category": "Mammal",
+    "iucnStatus": "DD/TH",
+    "family": "Soricidae",
+    "population": {
+      "2000": 800,
+      "2005": 700,
+      "2010": 600,
+      "2015": 500,
+      "2020": 400,
+      "2026": 300,
+      "trajectory": "-62.5%"
+    },
+    "location": "28.8000, 83.8000",
+    "foodAndDiet": "Insectivore; fast-metabolizing predator consuming earthworms, insects, spiders, and grubs.",
+    "natureAndActivity": "Tiny, fast-moving mammal; active day and night in leaf litter. Lacks vision, relying on scent and touch.",
+    "spatialDistribution": "Solitary.",
+    "distribution": {
+      "provinces": [
+        "Gandaki Province"
+      ],
+      "districts": [
+        "Myagdi"
+      ]
+    },
+    "description": "Tiny, fast-moving mammal; active day and night in leaf litter. Lacks vision, relying on scent and touch.",
+    "images": []
+  }
+]
