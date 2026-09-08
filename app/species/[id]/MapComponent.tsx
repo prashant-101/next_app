@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import L from "leaflet";
+// @ts-expect-error leaflet CSS module types are missing
 import "leaflet/dist/leaflet.css";
 
 interface MapComponentProps {
@@ -9,8 +10,8 @@ interface MapComponentProps {
   speciesName: string;
 }
 
-// Nepal bounding box
-const NEPAL_BOUNDS: L.LatLngBoundsExpression = [
+// Fixed type definition using LatLngBoundsLiteral tuple structure
+const NEPAL_BOUNDS: L.LatLngBoundsLiteral = [
   [26.347, 80.058],
   [30.447, 88.201],
 ];
@@ -130,8 +131,7 @@ export default function MapComponent({
       ])
     );
 
-    const nepalBounds =
-      L.latLngBounds(NEPAL_BOUNDS);
+    const nepalBounds = L.latLngBounds(NEPAL_BOUNDS);
 
     const combinedBounds =
       nepalBounds.extend(pointsBounds);
