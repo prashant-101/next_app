@@ -7,7 +7,12 @@ import Skiper3 from "../components/ui/skiper-ui/skiper3";
 import { Skiper47 } from "../components/ui/skiper-ui/skiper47";
 import ErrorCircle from "../components/ui/skiper-ui/errorcircle";
 import ExpandableGrid from "../components/ui/skiper-ui/expandablegrid";
-import MapComponent from "@/components/ui/mapcomponent";
+import dynamic from "next/dynamic";
+
+const MapComponent = dynamic(
+  () => import("@/components/ui/mapcomponent"),
+  { ssr: false }
+);
 
 export default function Page() {
   
@@ -223,7 +228,15 @@ export default function Page() {
               INTERACTIVE MAP
           ================================================= */}
 
-          <MapComponent />
+          <MapComponent
+            locations={[
+              { lat: 28.3949, lng: 84.124 }, // Kathmandu area
+              { lat: 27.7172, lng: 85.324 },  // Chitwan
+              { lat: 28.5, lng: 83.5 },       // Annapurna region
+              { lat: 27.9, lng: 86.8 },       // Everest region
+            ]}
+            speciesName="Nepal Wildlife"
+          />
 
         </div>
 

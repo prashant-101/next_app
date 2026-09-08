@@ -2,15 +2,14 @@
 
 import { useEffect, useRef } from "react";
 import L from "leaflet";
-// @ts-expect-error leaflet CSS module types are missing
 import "leaflet/dist/leaflet.css";
 
-interface MapComponentProps {
-  locations: { lat: number; lng: number }[];
-  speciesName: string;
+export interface MapComponentProps {
+  locations?: { lat: number; lng: number }[];
+  speciesName?: string;
 }
 
-// Fixed type definition using LatLngBoundsLiteral tuple structure
+// Nepal bounding box
 const NEPAL_BOUNDS: L.LatLngBoundsLiteral = [
   [26.347, 80.058],
   [30.447, 88.201],
@@ -19,14 +18,15 @@ const NEPAL_BOUNDS: L.LatLngBoundsLiteral = [
 const NEPAL_CENTER: [number, number] = [28.3949, 84.124];
 
 export default function MapComponent({
-  locations,
-  speciesName,
+  locations = [],
+  speciesName = "Nepal Region",
 }: MapComponentProps) {
   const mapRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<L.Map | null>(null);
 
   useEffect(() => {
-    if (!mapRef.current || locations.length === 0) return;
+    if (typeof window === "undefined") return;
+    if (!mapRef.current) return;
 
     /* =====================================================
        CREATE MAP
@@ -93,94 +93,76 @@ export default function MapComponent({
        ADD POINTERS
     ===================================================== */
 
-    locations.forEach((location, index) => {
-      L.marker(
-        [location.lat, location.lng],
-        {
+    if (locations.length > 0) {
+      locations.forEach((location, index) => {
+        L.marker([location.lat, location.lng], {
           icon: pointerIcon,
           title: speciesName,
-        }
-      )
-        .addTo(map)
-        .bindPopup(`
-          <div style="min-width: 160px;">
-            <strong style="font-size: 15px;">
-              ${speciesName}
-            </strong>
-            <br />
-            <span style="color: #64748b;">
-              Location ${index + 1}
-            </span>
-            <br />
-            <span style="font-size: 12px; color: #94a3b8;">
-              ${location.lat.toFixed(4)}, 
-              ${location.lng.toFixed(4)}
-            </span>
-          </div>
-        `);
-    });
+        })
+          .addTo(map)
+          .bindPopup(`
+            <div style="min-width: 160px;">
+              <strong style="font-size: 15px;">
+                ${speciesName}
+              </strong>
+              <br />
+              <span style="color: #64748b;">
+                Location ${index + 1}
+              </span>
+              <br />
+              <span style="font-size: 12px; color: #94a3b8;">
+                ${location.lat.toFixed(4)}, 
+                ${location.lng.toFixed(4)}
+              </span>
+            </div>
+          `);
+      });
 
-    /* =====================================================
-       FIT NEPAL + LOCATIONS
-    ===================================================== */
+      /* =====================================================
+         FIT NEPAL + LOCATIONS
+      ===================================================== */
 
-    const pointsBounds = L.latLngBounds(
-      locations.map((loc) => [
-        loc.lat,
-        loc.lng,
-      ])
-    );
+      const pointsBounds = L.latLngBounds(
+        locations.map((loc) => [loc.lat, loc.lng])
+      );
 
-    const nepalBounds = L.latLngBounds(NEPAL_BOUNDS);
+      const nepalBounds = L.latLngBounds(NEPAL_BOUNDS);
+      const combinedBounds = nepalBounds.extend(pointsBounds);
 
-    const combinedBounds =
-      nepalBounds.extend(pointsBounds);
-
-    map.fitBounds(combinedBounds, {
-      padding: [30, 30],
-      maxZoom: 8,
-    });
+      map.fitBounds(combinedBounds, {
+        padding: [30, 30],
+        maxZoom: 8,
+      });
+    } else {
+      map.setView(NEPAL_CENTER, 7);
+    }
 
     /* =====================================================
        DISABLE SCROLL WHEN CLICKING OUTSIDE MAP
     ===================================================== */
 
-    const handleOutsideClick = (
-      e: MouseEvent
-    ) => {
+    const handleOutsideClick = (e: MouseEvent) => {
       if (
         mapRef.current &&
-        !mapRef.current.contains(
-          e.target as Node
-        )
+        !mapRef.current.contains(e.target as Node)
       ) {
         map.scrollWheelZoom.disable();
       }
     };
 
-    document.addEventListener(
-      "click",
-      handleOutsideClick
-    );
+    document.addEventListener("click", handleOutsideClick);
 
     /* =====================================================
        CLEANUP
     ===================================================== */
 
     return () => {
-      document.removeEventListener(
-        "click",
-        handleOutsideClick
-      );
+      document.removeEventListener("click", handleOutsideClick);
     };
   }, [locations, speciesName]);
 
   return (
     <>
-      {/* =================================================
-          POINTER CSS
-      ================================================= */}
-
       <style jsx global>{`
         .custom-map-pointer {
           background: transparent !important;
@@ -202,8 +184,7 @@ export default function MapComponent({
           border: 3px solid white;
           border-radius: 50% 50% 50% 0;
           transform: rotate(-45deg);
-          box-shadow:
-            0 3px 10px rgba(0, 0, 0, 0.35);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
           position: relative;
         }
 
@@ -218,14 +199,7 @@ export default function MapComponent({
         }
       `}</style>
 
-      {/* =================================================
-          MAP
-      ================================================= */}
-
-      <div
-        ref={mapRef}
-        className="w-full h-full"
-      />
+      <div ref={mapRef} className="w-full h-full" />
     </>
   );
 }

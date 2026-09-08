@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import L from "leaflet";
-// @ts-expect-error leaflet CSS module types are missing
 import "leaflet/dist/leaflet.css";
 
 interface MapComponentProps {

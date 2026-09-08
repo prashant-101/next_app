@@ -32,6 +32,8 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+# Exception: .env.example should be committed for documentation
+!.env.example
 
 # vercel
 .vercel
@@ -52,6 +54,8 @@ out/
 .env.development.local
 .env.test.local
 .env.production.local
+# Exception: .env.example should be committed for documentation
+!.env.example
 
 # debug
 npm-debug.log*
