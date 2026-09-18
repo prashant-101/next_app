@@ -10,7 +10,7 @@ import ExpandableGrid from "../components/ui/skiper-ui/expandablegrid";
 import dynamic from "next/dynamic";
 
 const MapComponent = dynamic(
-  () => import("@/components/ui/mapcomponent"),
+  () => import("@/components/ui/mapimagecomponent"),
   { ssr: false }
 );
 
