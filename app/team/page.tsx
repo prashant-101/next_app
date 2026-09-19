@@ -91,7 +91,7 @@ const mentees: Person[] = [
     name: "Prashant Subedi",
     role: "Mentee",
     image: "/team/me.jpeg",
-    linkedin:""
+    linkedin:"linkedin.com/in/prashant-subedi-89038b341"
   },
 
   {
@@ -106,7 +106,13 @@ const mentees: Person[] = [
     role: "Mentee",
     image: "/images/team/sarjak.png",
     linkedin:""
+  },{
+    name: "Astha  ",
+    role: "Mentee",
+    image: "/images/team/astha.png",
+    linkedin:""
   },
+
 
   {
     name: "Easika Neupane",
